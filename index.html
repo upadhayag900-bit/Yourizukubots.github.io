@@ -3,404 +3,2189 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Conditions — Isukobit</title>
-<meta name="description" content="Terms and Conditions for using Isukobit Telegram File Store Bot.">
+<meta name="description" content="Isukobit — Terms of Service, Privacy Policy, DMCA & Content Policy">
+<meta name="keywords" content="isukobit, terms, privacy, dmca, file store bot, telegram">
+<meta name="author" content="Isukobit Team">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0088cc">
+<title>Isukobit — Terms, Privacy & Policies</title>
+
 <style>
-:root{
-  --bg:#0a0e1a;
-  --bg2:#0f1526;
-  --card:#131b32;
-  --border:#1f2a4d;
-  --text:#e8ecf8;
-  --muted:#93a0c2;
-  --accent:#4f7cff;
-  --accent2:#8b5cf6;
-  --gradient:linear-gradient(135deg,#4f7cff,#8b5cf6);
+/* ═══════════════════════════════════════════════════════════════════
+   🎨 GLOBAL RESET & VARIABLES
+   ═══════════════════════════════════════════════════════════════════ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
-  overflow-x:hidden;
+
+:root {
+    --primary: #0088cc;
+    --primary-dark: #006699;
+    --primary-light: #33aadd;
+    --bg: #0e1621;
+    --bg-secondary: #17212b;
+    --bg-card: #1c2733;
+    --bg-hover: #232e3c;
+    --text: #ffffff;
+    --text-secondary: #a8b2bd;
+    --text-muted: #7d8b99;
+    --border: #2b3846;
+    --success: #4dcd5e;
+    --warning: #ffb340;
+    --danger: #ff5c5c;
+    --info: #4da6ff;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s ease;
 }
-/* ─── Animated background glow ─── */
-body::before{
-  content:'';position:fixed;top:-200px;left:-200px;width:600px;height:600px;
-  background:radial-gradient(circle,rgba(79,124,255,.15),transparent 70%);
-  pointer-events:none;z-index:0;
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
-body::after{
-  content:'';position:fixed;bottom:-200px;right:-200px;width:600px;height:600px;
-  background:radial-gradient(circle,rgba(139,92,246,.12),transparent 70%);
-  pointer-events:none;z-index:0;
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+                 "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
-/* ─── Scroll progress bar ─── */
-#progress{
-  position:fixed;top:0;left:0;height:3px;width:0%;
-  background:var(--gradient);z-index:1000;
-  transition:width .1s linear;
+
+/* ═══════════════════════════════════════════════════════════════════
+   🔝 HEADER
+   ═══════════════════════════════════════════════════════════════════ */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(23, 33, 43, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
 }
-/* ─── Header ─── */
-header{
-  position:sticky;top:0;z-index:100;
-  background:rgba(10,14,26,.85);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.5px;
 }
-.nav{
-  max-width:1100px;margin:0 auto;padding:16px 24px;
-  display:flex;align-items:center;justify-content:space-between;
+
+.header-logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
 }
-.logo{
-  font-size:1.3rem;font-weight:800;letter-spacing:.5px;
-  background:var(--gradient);
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
+
+.header-logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
 }
-.logo span{-webkit-text-fill-color:var(--text);font-weight:400}
-.nav a.tg{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--gradient);color:#fff;text-decoration:none;
-  padding:9px 18px;border-radius:50px;font-size:.9rem;font-weight:600;
-  transition:transform .2s,box-shadow .2s;
+
+.header-logo-text small {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 400;
 }
-.nav a.tg:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,124,255,.4)}
-/* ─── Hero ─── */
-.hero{
-  position:relative;z-index:1;
-  max-width:1100px;margin:0 auto;
-  padding:80px 24px 50px;text-align:center;
+
+.header-nav {
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
-.hero .badge{
-  display:inline-block;padding:6px 16px;border-radius:50px;
-  background:rgba(79,124,255,.1);border:1px solid rgba(79,124,255,.3);
-  color:var(--accent);font-size:.8rem;font-weight:600;
-  letter-spacing:1px;text-transform:uppercase;
-  margin-bottom:20px;animation:fadeDown .6s ease both;
+
+.header-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
 }
-.hero h1{
-  font-size:clamp(2rem,5vw,3.2rem);font-weight:800;
-  line-height:1.2;margin-bottom:16px;
-  animation:fadeDown .6s .1s ease both;
+
+.header-nav a:hover {
+    background: var(--bg-hover);
+    color: var(--text);
 }
-.hero h1 em{
-  font-style:normal;
-  background:var(--gradient);
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
+
+.header-nav .btn-primary {
+    background: var(--primary);
+    color: white;
 }
-.hero p{
-  color:var(--muted);max-width:640px;margin:0 auto 28px;
-  font-size:1.05rem;animation:fadeDown .6s .2s ease both;
+
+.header-nav .btn-primary:hover {
+    background: var(--primary-dark);
 }
-.hero .updated{
-  display:inline-block;color:var(--muted);font-size:.85rem;
-  padding:8px 18px;border:1px solid var(--border);border-radius:50px;
-  animation:fadeDown .6s .3s ease both;
+
+/* Mobile header */
+@media (max-width: 640px) {
+    .header-nav {
+        display: none;
+    }
+    .header-logo-text small {
+        display: none;
+    }
 }
-@keyframes fadeDown{
-  from{opacity:0;transform:translateY(-16px)}
-  to{opacity:1;transform:translateY(0)}
+
+/* ═══════════════════════════════════════════════════════════════════
+   🌊 HERO SECTION
+   ═══════════════════════════════════════════════════════════════════ */
+.hero {
+    padding: 60px 20px 40px;
+    text-align: center;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg) 100%);
+    position: relative;
+    overflow: hidden;
 }
-/* ─── Layout ─── */
-.wrap{
-  position:relative;z-index:1;
-  max-width:1100px;margin:0 auto;padding:20px 24px 80px;
-  display:grid;grid-template-columns:260px 1fr;gap:32px;
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 136, 204, 0.15) 0%, transparent 70%);
+    animation: pulse 8s ease-in-out infinite;
+    pointer-events: none;
 }
-/* ─── Sidebar TOC ─── */
-.toc{
-  position:sticky;top:90px;align-self:start;
-  background:var(--card);border:1px solid var(--border);
-  border-radius:16px;padding:20px;height:fit-content;
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
 }
-.toc h4{
-  font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;
-  color:var(--muted);margin-bottom:14px;
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #fff 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    letter-spacing: -1px;
 }
-.toc a{
-  display:block;color:var(--muted);text-decoration:none;
-  font-size:.88rem;padding:7px 12px;border-radius:8px;
-  border-left:2px solid transparent;
-  transition:all .2s;
+
+.hero p {
+    font-size: 17px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 24px;
+    position: relative;
 }
-.toc a:hover,.toc a.active{
-  color:var(--text);background:rgba(79,124,255,.08);
-  border-left-color:var(--accent);
+
+.hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    position: relative;
 }
-/* ─── Content cards ─── */
-.card{
-  background:var(--card);border:1px solid var(--border);
-  border-radius:18px;padding:32px;margin-bottom:24px;
-  opacity:0;transform:translateY(28px);
-  transition:opacity .6s ease,transform .6s ease;
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    transition: var(--transition);
 }
-.card.visible{opacity:1;transform:translateY(0)}
-.card:hover{border-color:rgba(79,124,255,.35)}
-.card .num{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:38px;height:38px;border-radius:10px;
-  background:var(--gradient);color:#fff;
-  font-weight:700;font-size:.95rem;margin-bottom:16px;
+
+.badge:hover {
+    border-color: var(--primary);
+    color: var(--text);
 }
-.card h2{font-size:1.35rem;margin-bottom:14px;font-weight:700}
-.card h3{font-size:1.05rem;margin:20px 0 8px;color:var(--accent)}
-.card p{color:#c3cbe4;margin-bottom:12px;font-size:.97rem}
-.card ul,.card ol{margin:0 0 14px 22px;color:#c3cbe4}
-.card li{margin-bottom:8px;font-size:.95rem}
-.card li::marker{color:var(--accent)}
-.card strong{color:var(--text)}
-.hl{
-  background:rgba(79,124,255,.12);border:1px solid rgba(79,124,255,.25);
-  border-left:3px solid var(--accent);
-  padding:14px 18px;border-radius:10px;
-  color:#c3cbe4;font-size:.92rem;margin:14px 0;
+
+.badge-icon {
+    font-size: 14px;
 }
-.hl b{color:var(--accent)}
-/* ─── Footer ─── */
-footer{
-  position:relative;z-index:1;
-  border-top:1px solid var(--border);
-  background:var(--bg2);
-  padding:40px 24px;text-align:center;
+
+@media (max-width: 640px) {
+    .hero { padding: 40px 16px 30px; }
+    .hero h1 { font-size: 26px; }
+    .hero p { font-size: 15px; }
 }
-footer .logo{font-size:1.1rem;margin-bottom:8px}
-footer p{color:var(--muted);font-size:.85rem}
-footer a{color:var(--accent);text-decoration:none}
-/* ─── Back to top ─── */
-#topBtn{
-  position:fixed;bottom:24px;right:24px;z-index:500;
-  width:46px;height:46px;border-radius:50%;
-  background:var(--gradient);color:#fff;border:none;
-  font-size:1.2rem;cursor:pointer;
-  opacity:0;pointer-events:none;
-  transition:opacity .3s,transform .3s;
-  box-shadow:0 8px 24px rgba(79,124,255,.4);
+
+/* ═══════════════════════════════════════════════════════════════════
+   📋 TABLE OF CONTENTS
+   ═══════════════════════════════════════════════════════════════════ */
+.toc {
+    max-width: 900px;
+    margin: 0 auto 32px;
+    padding: 0 20px;
 }
-#topBtn.show{opacity:1;pointer-events:auto}
-#topBtn:hover{transform:translateY(-3px)}
-/* ─── Mobile ─── */
-@media(max-width:860px){
-  .wrap{grid-template-columns:1fr}
-  .toc{display:none}
-  .card{padding:24px}
-  .hero{padding:56px 20px 36px}
+
+.toc-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+}
+
+.toc-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toc-title-icon {
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 136, 204, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 8px;
+}
+
+.toc-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.toc-item:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+    border-color: var(--primary);
+    transform: translateX(4px);
+}
+
+.toc-item-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.toc-item-num {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   📄 CONTENT AREA
+   ═══════════════════════════════════════════════════════════════════ */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+}
+
+.section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+    scroll-margin-top: 100px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+}
+
+.section-title-wrap {
+    flex: 1;
+}
+
+.section-number {
+    font-size: 12px;
+    color: var(--primary-light);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+}
+
+.section-updated {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+.section p {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.section p:last-child {
+    margin-bottom: 0;
+}
+
+.section h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section h3::before {
+    content: '';
+    width: 4px;
+    height: 18px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.section h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.section ul, .section ol {
+    margin: 12px 0 16px 20px;
+    color: var(--text-secondary);
+}
+
+.section li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+}
+
+.section li strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.section code {
+    background: var(--bg-secondary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: var(--primary-light);
+    border: 1px solid var(--border);
+}
+
+.section a {
+    color: var(--primary-light);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--primary-light);
+    transition: var(--transition);
+}
+
+.section a:hover {
+    color: var(--primary);
+    border-bottom-style: solid;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ⚠️ ALERT BOXES
+   ═══════════════════════════════════════════════════════════════════ */
+.alert {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    margin: 16px 0;
+    border-left: 4px solid;
+    font-size: 14px;
+}
+
+.alert-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    line-height: 1.4;
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-content strong {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.alert-info {
+    background: rgba(77, 166, 255, 0.1);
+    border-color: var(--info);
+    color: #cce5ff;
+}
+
+.alert-warning {
+    background: rgba(255, 179, 64, 0.1);
+    border-color: var(--warning);
+    color: #ffe5cc;
+}
+
+.alert-danger {
+    background: rgba(255, 92, 92, 0.1);
+    border-color: var(--danger);
+    color: #ffcccc;
+}
+
+.alert-success {
+    background: rgba(77, 205, 94, 0.1);
+    border-color: var(--success);
+    color: #d4f5d9;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   📊 INFO GRID
+   ═══════════════════════════════════════════════════════════════════ */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.info-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.info-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.info-value {
+    font-size: 15px;
+    color: var(--text);
+    font-weight: 600;
+    word-break: break-word;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   📋 DO / DON'T LISTS
+   ═══════════════════════════════════════════════════════════════════ */
+.do-dont-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.do-list, .dont-list {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+.do-list {
+    border-top: 3px solid var(--success);
+}
+
+.dont-list {
+    border-top: 3px solid var(--danger);
+}
+
+.do-list h4, .dont-list h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.do-list ul, .dont-list ul {
+    list-style: none;
+    margin: 0;
+}
+
+.do-list li, .dont-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.do-list li:last-child, .dont-list li:last-child {
+    border-bottom: none;
+}
+
+.do-list li::before {
+    content: '✅';
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.dont-list li::before {
+    content: '❌';
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   📞 CONTACT CARDS
+   ═══════════════════════════════════════════════════════════════════ */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    background: var(--bg-hover);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.contact-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    word-break: break-word;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   🔙 BACK TO TOP
+   ═══════════════════════════════════════════════════════════════════ */
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 16px rgba(0, 136, 204, 0.4);
+    transition: var(--transition);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 136, 204, 0.5);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   🦶 FOOTER
+   ═══════════════════════════════════════════════════════════════════ */
+.footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    padding: 40px 20px 24px;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #fff 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-tagline {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-light);
+}
+
+.footer-copy {
+    color: var(--text-muted);
+    font-size: 13px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-copy strong {
+    color: var(--text-secondary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   📱 MOBILE RESPONSIVE
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+    body {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 20px;
+        margin-bottom: 16px;
+        border-radius: 10px;
+    }
+
+    .section-header {
+        gap: 12px;
+    }
+
+    .section-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 18px;
+    }
+
+    .section h3 {
+        font-size: 15px;
+    }
+
+    .toc-card {
+        padding: 16px;
+    }
+
+    .toc-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 12px 60px;
+    }
+
+    .back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .do-dont-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   🖨️ PRINT STYLES
+   ═══════════════════════════════════════════════════════════════════ */
+@media print {
+    .header, .back-to-top, .footer-links {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .section {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+    }
+
+    .section a {
+        color: #006699;
+    }
 }
 </style>
 </head>
 <body>
 
-<div id="progress"></div>
-
-<header>
-  <div class="nav">
-    <div class="logo">Isuko<span>bit</span></div>
-    <a class="tg" href="https://t.me/yourisukubot" target="_blank">Open Bot</a>
-  </div>
+<!-- ═══════════════════════════════════════════════════════════════════
+     🔝 HEADER
+     ═══════════════════════════════════════════════════════════════════ -->
+<header class="header">
+    <a href="/" class="header-logo">
+        <div class="header-logo-icon">🚀</div>
+        <div class="header-logo-text">
+            Isukobit
+            <small>File Store Bot</small>
+        </div>
+    </a>
+    <nav class="header-nav">
+        <a href="#terms">Terms</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#dmca">DMCA</a>
+        <a href="#contact" class="btn-primary">Contact</a>
+    </nav>
 </header>
 
+<!-- ═══════════════════════════════════════════════════════════════════
+     🌊 HERO
+     ═══════════════════════════════════════════════════════════════════ -->
 <section class="hero">
-  <div class="badge">Legal</div>
-  <h1>Terms &amp; <em>Conditions</em></h1>
-  <p>Please read these terms carefully before using Isukobit. By using the bot, you agree to be bound by these terms.</p>
-  <div class="updated">🔄 Last updated: October 2026</div>
+    <h1>Terms, Privacy & Policies</h1>
+    <p>
+        Isukobit use karne se pehle yeh page zaroor padhein. Aapki privacy,
+        rights aur responsibilities sab yahan clear kiye gaye hain.
+    </p>
+    <div class="hero-badges">
+        <span class="badge">
+            <span class="badge-icon">📅</span>
+            Last Updated: 15 Feb 2026
+        </span>
+        <span class="badge">
+            <span class="badge-icon">📜</span>
+            Version 2.0
+        </span>
+        <span class="badge">
+            <span class="badge-icon">🌍</span>
+            Global
+        </span>
+    </div>
 </section>
 
-<div class="wrap">
-
-  <!-- Sidebar -->
-  <nav class="toc" id="toc">
-    <h4>📑 On this page</h4>
-    <a href="#s1">1. Acceptance</a>
-    <a href="#s2">2. About the Service</a>
-    <a href="#s3">3. Eligibility</a>
-    <a href="#s4">4. Acceptable Use</a>
-    <a href="#s5">5. Your Content</a>
-    <a href="#s6">6. Copyright</a>
-    <a href="#s7">7. Privacy</a>
-    <a href="#s8">8. Service Availability</a>
-    <a href="#s9">9. Limitation of Liability</a>
-    <a href="#s10">10. Termination</a>
-    <a href="#s11">11. Changes to Terms</a>
-    <a href="#s12">12. Contact</a>
-  </nav>
-
-  <!-- Content -->
-  <main>
-
-    <div class="card" id="s1">
-      <div class="num">1</div>
-      <h2>Acceptance of Terms</h2>
-      <p>By accessing or using <strong>Isukobit</strong> ("the Service", "the Bot"), operated on Telegram as <strong>@yourisukubot</strong>, you agree to be bound by these Terms &amp; Conditions and our Privacy practices described herein.</p>
-      <p>If you do not agree with any part of these terms, please discontinue use of the Service immediately.</p>
+<!-- ═══════════════════════════════════════════════════════════════════
+     📋 TABLE OF CONTENTS
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="toc">
+    <div class="toc-card">
+        <div class="toc-title">
+            <div class="toc-title-icon">📋</div>
+            Table of Contents
+        </div>
+        <div class="toc-grid">
+            <a href="#about" class="toc-item">
+                <span class="toc-item-icon">ℹ️</span>
+                About Isukobit
+                <span class="toc-item-num">01</span>
+            </a>
+            <a href="#acceptance" class="toc-item">
+                <span class="toc-item-icon">✅</span>
+                Acceptance of Terms
+                <span class="toc-item-num">02</span>
+            </a>
+            <a href="#eligibility" class="toc-item">
+                <span class="toc-item-icon">👤</span>
+                Eligibility
+                <span class="toc-item-num">03</span>
+            </a>
+            <a href="#account" class="toc-item">
+                <span class="toc-item-icon">🔐</span>
+                User Account
+                <span class="toc-item-num">04</span>
+            </a>
+            <a href="#usage" class="toc-item">
+                <span class="toc-item-icon">📤</span>
+                Acceptable Use
+                <span class="toc-item-num">05</span>
+            </a>
+            <a href="#prohibited" class="toc-item">
+                <span class="toc-item-icon">🚫</span>
+                Prohibited Content
+                <span class="toc-item-num">06</span>
+            </a>
+            <a href="#copyright" class="toc-item">
+                <span class="toc-item-icon">©️</span>
+                Copyright Policy
+                <span class="toc-item-num">07</span>
+            </a>
+            <a href="#privacy" class="toc-item">
+                <span class="toc-item-icon">🔒</span>
+                Privacy Policy
+                <span class="toc-item-num">08</span>
+            </a>
+            <a href="#data" class="toc-item">
+                <span class="toc-item-icon">💾</span>
+                Data Collection
+                <span class="toc-item-num">09</span>
+            </a>
+            <a href="#security" class="toc-item">
+                <span class="toc-item-icon">🛡️</span>
+                Data Security
+                <span class="toc-item-num">10</span>
+            </a>
+            <a href="#dmca" class="toc-item">
+                <span class="toc-item-icon">📩</span>
+                DMCA & Takedown
+                <span class="toc-item-num">11</span>
+            </a>
+            <a href="#abuse" class="toc-item">
+                <span class="toc-item-icon">🚨</span>
+                Abuse Reporting
+                <span class="toc-item-num">12</span>
+            </a>
+            <a href="#termination" class="toc-item">
+                <span class="toc-item-icon">🔚</span>
+                Termination
+                <span class="toc-item-num">13</span>
+            </a>
+            <a href="#disclaimer" class="toc-item">
+                <span class="toc-item-icon">⚠️</span>
+                Disclaimer
+                <span class="toc-item-num">14</span>
+            </a>
+            <a href="#liability" class="toc-item">
+                <span class="toc-item-icon">📉</span>
+                Limitation of Liability
+                <span class="toc-item-num">15</span>
+            </a>
+            <a href="#changes" class="toc-item">
+                <span class="toc-item-icon">🔄</span>
+                Changes to Terms
+                <span class="toc-item-num">16</span>
+            </a>
+            <a href="#law" class="toc-item">
+                <span class="toc-item-icon">⚖️</span>
+                Governing Law
+                <span class="toc-item-num">17</span>
+            </a>
+            <a href="#contact" class="toc-item">
+                <span class="toc-item-icon">📞</span>
+                Contact Us
+                <span class="toc-item-num">18</span>
+            </a>
+        </div>
     </div>
-
-    <div class="card" id="s2">
-      <div class="num">2</div>
-      <h2>About the Service</h2>
-      <p>Isukobit is a Telegram-based utility bot that allows users to:</p>
-      <ul>
-        <li>Upload and organize personal files through Telegram</li>
-        <li>Generate unique shareable links and codes for uploaded content</li>
-        <li>Search, manage, and retrieve their own files</li>
-        <li>Create grouped batches of multiple files under a single link</li>
-      </ul>
-      <div class="hl">⚡ The Service is provided <b>"as is"</b> and <b>"as available"</b> on the Telegram platform, and is subject to Telegram's own Terms of Service.</div>
-    </div>
-
-    <div class="card" id="s3">
-      <div class="num">3</div>
-      <h2>Eligibility</h2>
-      <p>To use the Service you must:</p>
-      <ul>
-        <li>Have a valid Telegram account in good standing</li>
-        <li>Be at least 13 years of age (or the minimum age of digital consent in your country)</li>
-        <li>Provide accurate information when interacting with the Bot</li>
-      </ul>
-      <p>By using the Service, you represent that you meet these requirements.</p>
-    </div>
-
-    <div class="card" id="s4">
-      <div class="num">4</div>
-      <h2>Acceptable Use Policy</h2>
-      <p>You agree to use the Service only for lawful purposes. You must <strong>not</strong> upload, share, or distribute:</p>
-      <ul>
-        <li>Content that is illegal under any applicable local, national, or international law</li>
-        <li>Content that infringes the intellectual property rights of others</li>
-        <li>Malware, viruses, spyware, or any harmful or destructive code</li>
-        <li>Harassing, defamatory, abusive, or hateful content</li>
-        <li>Adult or sexually explicit material, especially involving minors — <strong>zero tolerance</strong></li>
-        <li>Spam, scams, phishing material, or misleading content</li>
-        <li>Personal data of third parties without their consent</li>
-      </ul>
-      <div class="hl">🚫 Any violation may result in <b>immediate and permanent ban</b> from the Service without prior notice, and where required, reporting to relevant authorities.</div>
-    </div>
-
-    <div class="card" id="s5">
-      <div class="num">5</div>
-      <h2>Your Content &amp; Responsibility</h2>
-      <p>You retain full ownership and responsibility for any content you upload or share through the Service.</p>
-      <ul>
-        <li>You are solely responsible for the legality, reliability, and appropriateness of your content</li>
-        <li>Share links and file codes you generate should be treated like passwords — anyone with the link may access the content, subject to the Service's access controls</li>
-        <li>Do not upload content you do not have the right to distribute</li>
-      </ul>
-      <p>We do not pre-screen user content, but reserve the right to remove any content and suspend any account that violates these terms.</p>
-    </div>
-
-    <div class="card" id="s6">
-      <div class="num">6</div>
-      <h2>Copyright &amp; DMCA</h2>
-      <p>We respect the intellectual property rights of others and expect users to do the same.</p>
-      <p>If you believe that content shared through the Service infringes your copyright, please contact us with:</p>
-      <ol>
-        <li>Identification of the copyrighted work claimed to be infringed</li>
-        <li>The specific link or file code in question</li>
-        <li>Your contact information</li>
-        <li>A good-faith statement that the use is unauthorized</li>
-      </ol>
-      <p>Valid complaints will be processed promptly, and infringing content will be removed.</p>
-    </div>
-
-    <div class="card" id="s7">
-      <div class="num">7</div>
-      <h2>Privacy</h2>
-      <p>The Service operates entirely within Telegram. To function, the Bot only requires the basic information Telegram provides to any bot you interact with — such as your Telegram user ID, name, and username.</p>
-      <ul>
-        <li>No registration beyond Telegram is required</li>
-        <li>No email, phone number, or payment details are collected by the Bot</li>
-        <li>Your files remain accessible only through your generated codes/links unless you choose to share them</li>
-      </ul>
-      <div class="hl">🔒 We never sell, rent, or trade user information to third parties.</div>
-    </div>
-
-    <div class="card" id="s8">
-      <div class="num">8</div>
-      <h2>Service Availability</h2>
-      <p>We strive to keep the Service available 24/7, but we do not guarantee uninterrupted or error-free operation.</p>
-      <ul>
-        <li>The Service may be temporarily unavailable for maintenance, updates, or reasons beyond our control</li>
-        <li>Since the Service depends on Telegram, any Telegram outage or policy change may affect availability</li>
-        <li>Features may be added, modified, or removed at any time</li>
-      </ul>
-    </div>
-
-    <div class="card" id="s9">
-      <div class="num">9</div>
-      <h2>Limitation of Liability</h2>
-      <p>To the maximum extent permitted by law:</p>
-      <ul>
-        <li>The Service is provided <strong>without warranties of any kind</strong>, express or implied</li>
-        <li>We are not liable for any loss of data, content, or access to your files</li>
-        <li>We are not responsible for the actions, content, or conduct of any user of the Service</li>
-        <li>We are not liable for any indirect, incidental, or consequential damages arising from your use of the Service</li>
-        <li>You use the Service entirely at your own risk</li>
-      </ul>
-    </div>
-
-    <div class="card" id="s10">
-      <div class="num">10</div>
-      <h2>Termination</h2>
-      <p>We reserve the right to suspend or permanently terminate access to the Service for any user who:</p>
-      <ul>
-        <li>Violates these Terms &amp; Conditions</li>
-        <li>Abuses, exploits, or attempts to disrupt the Service</li>
-        <li>Uses the Service for fraudulent or illegal activities</li>
-      </ul>
-      <p>You may stop using the Service at any time. Termination does not limit any other rights or remedies available to us under law.</p>
-    </div>
-
-    <div class="card" id="s11">
-      <div class="num">11</div>
-      <h2>Changes to These Terms</h2>
-      <p>We may update these Terms &amp; Conditions from time to time. When we do, we will update the "Last updated" date on this page.</p>
-      <p>Continued use of the Service after changes are posted constitutes acceptance of the revised terms. We encourage you to review this page periodically.</p>
-    </div>
-
-    <div class="card" id="s12">
-      <div class="num">12</div>
-      <h2>Contact Us</h2>
-      <p>If you have any questions, concerns, or requests regarding these Terms &amp; Conditions, you can reach us through the bot:</p>
-      <div class="hl">🤖 Telegram Bot: <b>@yourisukubot</b><br>📢 Updates Channel: mention your channel here<br>📞 Support: mention your support username here</div>
-      <p>We aim to respond to all inquiries as quickly as possible.</p>
-    </div>
-
-  </main>
 </div>
 
-<footer>
-  <div class="logo">Isuko<span>bit</span></div>
-  <p>© 2026 Isukobit — All rights reserved. · <a href="#">Terms &amp; Conditions</a></p>
+<!-- ═══════════════════════════════════════════════════════════════════
+     📄 MAIN CONTENT
+     ═══════════════════════════════════════════════════════════════════ -->
+<div class="container">
+
+    <!-- 01 -->
+    <section class="section" id="about">
+        <div class="section-header">
+            <div class="section-icon">ℹ️</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 01</div>
+                <h2 class="section-title">About Isukobit</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            <strong>Isukobit</strong> ek Telegram-based File Store Bot hai jo users ko
+            files upload, search, download aur manage karne ki suvidha deta hai.
+            Hamara bot Telegram ke official Bot API platform par kaam karta hai
+            aur user-generated content ko store aur share karne ki facility deta hai.
+        </p>
+
+        <p>
+            Isukobit koi bhi file khud host nahi karta. Saari files Telegram ke
+            secure servers par store hoti hain aur bot sirf unhe reference
+            karta hai. Hum ek <strong>middleware service</strong> hain jo aapko
+            files access karne mein madad karta hai.
+        </p>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-label">Service Name</div>
+                <div class="info-value">Isukobit Bot</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Platform</div>
+                <div class="info-value">Telegram</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Service Type</div>
+                <div class="info-value">File Storage Middleware</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Country</div>
+                <div class="info-value">India</div>
+            </div>
+        </div>
+
+        <div class="alert alert-info">
+            <div class="alert-icon">💡</div>
+            <div class="alert-content">
+                <strong>Important:</strong>
+                Isukobit Telegram ka official product nahi hai. Yeh ek independent
+                third-party service hai jo Telegram Bot API ka use karke chalti hai.
+            </div>
+        </div>
+    </section>
+
+    <!-- 02 -->
+    <section class="section" id="acceptance">
+        <div class="section-header">
+            <div class="section-icon">✅</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 02</div>
+                <h2 class="section-title">Acceptance of Terms</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Isukobit bot ko use karne se pehle, aapko yeh Terms of Service,
+            Privacy Policy, aur saari related policies **zaroor padhni chahiye**.
+            Bot ko use karke aap automatically in sabhi terms se sehmat ho jate hain.
+        </p>
+
+        <h3>2.1 Agreement</h3>
+        <p>
+            Jab aap Isukobit bot ko Telegram par start karte hain, koi bhi file
+            upload karte hain, ya koi bhi feature use karte hain, toh aap
+            automatically agree karte hain:
+        </p>
+        <ul>
+            <li>Yeh saare Terms of Service accept karte hain</li>
+            <li>Privacy Policy se sehmat hain</li>
+            <li>Copyright aur DMCA policy follow karenge</li>
+            <li>Acceptable Use Policy ka paalan karenge</li>
+        </ul>
+
+        <h3>2.2 Aap Agar Sehmat Nahi Ho</h3>
+        <p>
+            Agar aap in terms se **sehmat nahi hain**, toh kripya bot ka use
+            **turant band kar dein**. Iska matlab aap bot use nahi kar sakte.
+        </p>
+
+        <h3>2.3 Age Requirement</h3>
+        <p>
+            Isukobit use karne ke liye aapki age <strong>13 saal ya usse zyada</strong>
+            honi chahiye. Agar aap 13 saal se chhote hain, toh aapko bot use
+            karne ki permission nahi hai.
+        </p>
+
+        <div class="alert alert-warning">
+            <div class="alert-icon">⚠️</div>
+            <div class="alert-content">
+                <strong>Warning:</strong>
+                Agar aap minor hain, toh apne parents ya guardians ki permission
+                ke bina bot use na karein.
+            </div>
+        </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="section" id="eligibility">
+        <div class="section-header">
+            <div class="section-icon">👤</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 03</div>
+                <h2 class="section-title">Eligibility</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Isukobit ka use karne ke liye aapko kuch eligibility criteria
+            fulfill karne honge:
+        </p>
+
+        <h3>3.1 Basic Requirements</h3>
+        <ul>
+            <li><strong>Age:</strong> Kam se kam 13 saal ki umar</li>
+            <li><strong>Telegram Account:</strong> Ek valid Telegram account</li>
+            <li><strong>Internet:</strong> Stable internet connection</li>
+            <li><strong>Legal Capacity:</strong> Contracts karne ki legal capacity</li>
+        </ul>
+
+        <h3>3.2 Kya Aap Eligible Nahi Hain Agar</h3>
+        <ul>
+            <li>Aap pehle banned kar diye gaye hain Isukobit se</li>
+            <li>Aapka Telegram account restricted hai</li>
+            <li>Aap kisi sanctioned country mein reside karte hain</li>
+            <li>Aapka intention illegal activities mein hai</li>
+        </ul>
+
+        <h3>3.3 Regional Restrictions</h3>
+        <p>
+            Kuch countries mein file sharing services restricted hain. Aap khud
+            responsible hain yeh ensure karne ke liye ki aapka use local laws
+            ke according legal hai.
+        </p>
+    </section>
+
+    <!-- 04 -->
+    <section class="section" id="account">
+        <div class="section-header">
+            <div class="section-icon">🔐</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 04</div>
+                <h2 class="section-title">User Account & Responsibilities</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Isukobit Telegram account ke through automatically register karta hai.
+            Aapko alag se signup karne ki zaroorat nahi hai. Lekin aapki
+            responsibilities hain:
+        </p>
+
+        <h3>4.1 Account Information</h3>
+        <p>
+            Hum yeh information store karte hain jab aap bot use karte hain:
+        </p>
+        <ul>
+            <li>Telegram User ID (public)</li>
+            <li>First Name aur Last Name (public)</li>
+            <li>Username (public)</li>
+            <li>Language preference</li>
+            <li>Upload/download history</li>
+            <li>Join date aur last activity</li>
+        </ul>
+
+        <h3>4.2 Aapki Responsibilities</h3>
+        <ul>
+            <li>Apni account activity ke liye aap khud responsible hain</li>
+            <li>Kisi aur ke account se bot use mat karein</li>
+            <li>Apni files ka backup khud rakhein</li>
+            <li>Bot ke misuse ke liye aap accountable honge</li>
+        </ul>
+
+        <h3>4.3 Account Restrictions</h3>
+        <p>
+            Hum kisi bhi account ko bina notice ke ban, restrict, ya suspend
+            kar sakte hain agar:
+        </p>
+        <ul>
+            <li>Terms ka violation ho</li>
+            <li>Spam ya abusive behavior ho</li>
+            <li>Illegal content upload ho</li>
+            <li>Copyright infringement ho</li>
+            <li>Bot pe attack ki koshish ho</li>
+        </ul>
+
+        <div class="alert alert-danger">
+            <div class="alert-icon">🚫</div>
+            <div class="alert-content">
+                <strong>Important:</strong>
+                Account ban karne ka faisla final hoga aur koi refund nahi milega.
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 -->
+    <section class="section" id="usage">
+        <div class="section-header">
+            <div class="section-icon">📤</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 05</div>
+                <h2 class="section-title">Acceptable Use Policy</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Isukobit ek file storage aur sharing platform hai. Aap yeh bot
+            legit purposes ke liye use kar sakte hain:
+        </p>
+
+        <div class="do-dont-grid">
+            <div class="do-list">
+                <h4>✅ Aap Kar Sakte Hain</h4>
+                <ul>
+                    <li>Personal documents store karna</li>
+                    <li>Study material share karna</li>
+                    <li>Business files backup karna</li>
+                    <li>Legal media content store karna</li>
+                    <li>Apni files organize karna</li>
+                    <li>Trusted logo ke saath share karna</li>
+                    <li>Open source files distribute karna</li>
+                </ul>
+            </div>
+            <div class="dont-list">
+                <h4>❌ Aap Nahi Kar Sakte</h4>
+                <ul>
+                    <li>Copyrighted content share karna</li>
+                    <li>Illegal material upload karna</li>
+                    <li>Malware ya virus distribute karna</li>
+                    <li>Spam content bhejna</li>
+                    <li>Adult content (jahan restricted ho)</li>
+                    <li>Kisi ki personal info share karna</li>
+                    <li>Bot ko abuse karna</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>5.1 Fair Usage</h3>
+        <p>
+            Isukobit fair usage policy follow karta hai. Agar aap excessive
+            use karte hain jo server performance ko affect karta hai, toh
+            hum aapko restrict kar sakte hain.
+        </p>
+
+        <h3>5.2 File Size Limit</h3>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-label">Max Upload (Bot API)</div>
+                <div class="info-value">50 MB</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Max Upload (Local API)</div>
+                <div class="info-value">2 GB</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Max Download</div>
+                <div class="info-value">50 MB / 2 GB</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Files Per User</div>
+                <div class="info-value">Unlimited</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 06 -->
+    <section class="section" id="prohibited">
+        <div class="section-header">
+            <div class="section-icon">🚫</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 06</div>
+                <h2 class="section-title">Prohibited Content</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Isukobit par kuch bhi content upload karna **strictly prohibited** hai.
+            Agar aap karte hain, toh aapka account permanently ban ho sakta hai
+            aur legal action bhi liya ja sakta hai.
+        </p>
+
+        <h3>6.1 Illegal Content</h3>
+        <ul>
+            <li>Child sexual abuse material (CSAM) — <strong>zero tolerance</strong></li>
+            <li>Human trafficking related content</li>
+            <li>Terrorism ya extremism promotion</li>
+            <li>Weapons ya explosives instructions</li>
+            <li>Drug manufacturing guides</li>
+            <li>Hacking ya cracking tools</li>
+            <li>Stolen data ya credentials</li>
+        </ul>
+
+        <h3>6.2 Copyrighted Content</h3>
+        <ul>
+            <li>Pirated movies, songs, software</li>
+            <li>Paid courses tanpa permission</li>
+            <li>Books ki scanned copies</li>
+            <li>Proprietary software cracks</li>
+            <li>Kisi bhi paid content ka unauthorized copy</li>
+        </ul>
+
+        <h3>6.3 Harmful Content</h3>
+        <ul>
+            <li>Malware, ransomware, trojans</li>
+            <li>Phishing pages</li>
+            <li>Scam material</li>
+            <li>Spam databases</li>
+            <li>Fake documents</li>
+        </ul>
+
+        <h3>6.4 Adult Content</h3>
+        <ul>
+            <li>Explicit sexual content (jahan banned ho)</li>
+            <li>Non-consensual intimate images</li>
+            <li>Revenge porn</li>
+            <li>Content involving minors</li>
+        </ul>
+
+        <h3>6.5 Harassment & Hate</h3>
+        <ul>
+            <li>Hate speech</li>
+            <li>Racial slurs</li>
+            <li>Religious intolerance</li>
+            <li>Personal attacks</li>
+            <li>Doxxing (personal info leak)</li>
+            <li>Bullying content</li>
+        </ul>
+
+        <div class="alert alert-danger">
+            <div class="alert-icon">⛔</div>
+            <div class="alert-content">
+                <strong>Zero Tolerance:</strong>
+                CSAM aur CSAM-related content par hum **turban** action lete hain.
+                Yeh content Telegram aur law enforcement ko report kiya jaata hai.
+            </div>
+        </div>
+    </section>
+
+    <!-- 07 -->
+    <section class="section" id="copyright">
+        <div class="section-header">
+            <div class="section-icon">©️</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 07</div>
+                <h2 class="section-title">Copyright Policy</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Isukobit copyright laws ka poora samman karta hai. Agar aap koi
+            copyrighted content upload karte hain toh aap khud uske liye
+            responsible hain.
+        </p>
+
+        <h3>7.1 Aapki Responsibility</h3>
+        <p>
+            Sirf wahi content upload karein jiska aapko:
+        </p>
+        <ul>
+            <li>Owner hain, YA</li>
+            <li>Legal permission hai, YA</li>
+            <li>Fair use ke under aata hai, YA</li>
+            <li>Public domain mein hai</li>
+        </ul>
+
+        <h3>7.2 Copyright Infringement Report</h3>
+        <p>
+            Agar aapko lagta hai ki aapka copyrighted work Isukobit par
+            unauthorized tarike se upload hua hai, toh aap DMCA takedown
+            notice bhej sakte hain.
+        </p>
+
+        <h3>7.3 DMCA Notice Requirements</h3>
+        <p>
+            Aapka notice is tarah hona chahiye:
+        </p>
+        <ol>
+            <li>Aapki physical ya electronic signature</li>
+            <li>Copyrighted work ka description</li>
+            <li>Infringing material ka location (URL ya file code)</li>
+            <li>Aapka contact info (email, phone)</li>
+            <li>Good faith statement</li>
+            <li>Perjury statement</li>
+        </ol>
+
+        <p>
+            Complete DMCA notice ke liye <a href="#dmca">Section 11</a> dekhein.
+        </p>
+
+        <h3>7.4 Counter-Notice</h3>
+        <p>
+            Agar aapko lagta hai ki aapka content galat tarike se remove hua
+            hai, toh aap counter-notice bhej sakte hain.
+        </p>
+    </section>
+
+    <!-- 08 -->
+    <section class="section" id="privacy">
+        <div class="section-header">
+            <div class="section-icon">🔒</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 08</div>
+                <h2 class="section-title">Privacy Policy</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Aapki privacy hamare liye sabse important hai. Yeh section batata
+            hai ki hum kaunsi information collect karte hain, kaise use karte
+            hain, aur kaise protect karte hain.
+        </p>
+
+        <h3>8.1 Data Controller</h3>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-label">Data Controller</div>
+                <div class="info-value">Isukobit Team</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Contact</div>
+                <div class="info-value">@IsukobitSupport</div>
+            </div>
+        </div>
+
+        <h3>8.2 Aapke Rights</h3>
+        <p>Aapko yeh rights hain:</p>
+        <ul>
+            <li><strong>Access:</strong> Apna data dekhne ka haq</li>
+            <li><strong>Correction:</strong> Galat data correct karwane ka haq</li>
+            <li><strong>Deletion:</strong> Apna data delete karwane ka haq</li>
+            <li><strong>Portability:</strong> Data export karne ka haq</li>
+            <li><strong>Objection:</strong> Data processing object karne ka haq</li>
+            <li><strong>Restriction:</strong> Data processing restrict karne ka haq</li>
+        </ul>
+
+        <h3>8.3 GDPR Compliance</h3>
+        <p>
+            Agar aap EU citizen hain, toh GDPR ke under aapko additional
+            rights milte hain. Hum GDPR comply karte hain.
+        </p>
+
+        <h3>8.4 Children's Privacy (COPPA)</h3>
+        <p>
+            Hum 13 saal se chhote bachcho se knowingly data collect nahi karte.
+            Agar aapko lagta hai ki aapke bachche ne data diya hai, toh
+            humein contact karein.
+        </p>
+    </section>
+
+    <!-- 09 -->
+    <section class="section" id="data">
+        <div class="section-header">
+            <div class="section-icon">💾</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 09</div>
+                <h2 class="section-title">Data Collection & Usage</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Hum minimal data collect karte hain, aur woh bhi sirf service
+            provide karne ke liye. Neeche detail mein bataya gaya hai:
+        </p>
+
+        <h3>9.1 Kya Data Collect Karte Hain</h3>
+        <ul>
+            <li><strong>Telegram User ID:</strong> Unique identifier</li>
+            <li><strong>First Name & Last Name:</strong> Display ke liye</li>
+            <li><strong>Username:</strong> Reference ke liye</li>
+            <li><strong>Language:</strong> Preference ke liye</li>
+            <li><strong>File metadata:</strong> File name, size, type</li>
+            <li><strong>Upload date:</strong> Tracking ke liye</li>
+            <li><strong>Download count:</strong> Statistics ke liye</li>
+            <li><strong>Activity timestamps:</strong> Session management ke liye</li>
+        </ul>
+
+        <h3>9.2 Kya Data NAHI Collect Karte</h3>
+        <ul>
+            <li>Phone number</li>
+            <li>Email address</li>
+            <li>Physical address</li>
+            <li>Credit card info</li>
+            <li>Contacts list</li>
+            <li>Location data</li>
+            <li>Message content (except file caption)</li>
+        </ul>
+
+        <h3>9.3 Data Usage</h3>
+        <p>Hum aapka data in purposes ke liye use karte hain:</p>
+        <ul>
+            <li>Bot service provide karna</li>
+            <li>File upload/download handle karna</li>
+            <li>User authentication</li>
+            <li>Statistics generate karna</li>
+            <li>Spam prevention</li>
+            <li>Bug fixing</li>
+            <li>Feature improvement</li>
+        </ul>
+
+        <h3>9.4 Data Retention</h3>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-label">User Data</div>
+                <div class="info-value">Until account deletion</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">File Metadata</div>
+                <div class="info-value">Until file deletion</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Logs</div>
+                <div class="info-value">30 days</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Backups</div>
+                <div class="info-value">7 days</div>
+            </div>
+        </div>
+
+        <h3>9.5 Data Sharing</h3>
+        <p>
+            Hum aapka data <strong>kabhi kisi third party ko nahi bechte</strong>.
+            Data sirf in cases mein share hota hai:
+        </p>
+        <ul>
+            <li>Legal requirement (court order)</li>
+            <li>User ne khud permission di</li>
+            <li>Service providers (jinke saath agreement hai)</li>
+        </ul>
+    </section>
+
+    <!-- 10 -->
+    <section class="section" id="security">
+        <div class="section-header">
+            <div class="section-icon">🛡️</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 10</div>
+                <h2 class="section-title">Data Security</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Hum aapka data secure rakhne ke liye multiple layers use karte hain:
+        </p>
+
+        <h3>10.1 Technical Measures</h3>
+        <ul>
+            <li><strong>Encryption:</strong> Sensitive data encrypted store hota hai</li>
+            <li><strong>HTTPS:</strong> All communication encrypted</li>
+            <li><strong>SQL Injection Protection:</strong> Parameterized queries</li>
+            <li><strong>Rate Limiting:</strong> Spam aur abuse se protection</li>
+            <li><strong>Input Validation:</strong> Malicious input block</li>
+            <li><strong>Secure Session Management:</strong> Session token expire</li>
+        </ul>
+
+        <h3>10.2 Organizational Measures</h3>
+        <ul>
+            <li>Admin access limited</li>
+            <li>Regular security audits</li>
+            <li>Incident response plan</li>
+            <li>Staff training</li>
+        </ul>
+
+        <h3>10.3 Security Limitations</h3>
+        <div class="alert alert-warning">
+            <div class="alert-icon">⚠️</div>
+            <div class="alert-content">
+                <strong>Important:</strong>
+                Koi bhi system 100% secure nahi hota. Hum best effort karte hain,
+                lekin absolute security ki guarantee nahi de sakte.
+            </div>
+        </div>
+
+        <h3>10.4 Data Breach Notification</h3>
+        <p>
+            Agar koi data breach hoti hai, toh hum 72 ghante ke andar affected
+            users ko notify karenge.
+        </p>
+    </section>
+
+    <!-- 11 -->
+    <section class="section" id="dmca">
+        <div class="section-header">
+            <div class="section-icon">📩</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 11</div>
+                <h2 class="section-title">DMCA & Takedown Policy</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Isukobit DMCA (Digital Millennium Copyright Act) comply karta hai.
+            Agar aapko copyright infringement dikhti hai, toh aap takedown
+            notice bhej sakte hain.
+        </p>
+
+        <h3>11.1 DMCA Notice Format</h3>
+        <p>Apna notice <a href="#contact">@IsukobitSupport</a> par bhejein:</p>
+
+        <div class="alert alert-info">
+            <div class="alert-icon">📝</div>
+            <div class="alert-content">
+                <strong>Subject:</strong> DMCA Takedown Notice<br>
+                <strong>To:</strong> @IsukobitSupport<br>
+                <strong>Include:</strong> Neeche di gayi saari details
+            </div>
+        </div>
+
+        <h3>11.2 Notice Contents</h3>
+        <ol>
+            <li>
+                <strong>Identification of Work:</strong> Aapka copyrighted work
+                kya hai (title, description, registration)
+            </li>
+            <li>
+                <strong>Infringing Material:</strong> Isukobit par kahan hai
+                (file code, URL)
+            </li>
+            <li>
+                <strong>Your Contact Info:</strong> Naam, email, phone, address
+            </li>
+            <li>
+                <strong>Good Faith Statement:</strong> "I believe in good faith
+                that the use is not authorized..."
+            </li>
+            <li>
+                <strong>Accuracy Statement:</strong> "Under penalty of perjury,
+                the information is accurate..."
+            </li>
+            <li>
+                <strong>Signature:</strong> Physical ya electronic
+            </li>
+        </ol>
+
+        <h3>11.3 Action Timeline</h3>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-label">Acknowledgment</div>
+                <div class="info-value">24-48 hours</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Review</div>
+                <div class="info-value">3-7 days</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Action</div>
+                <div class="info-value">7-14 days</div>
+            </div>
+        </div>
+
+        <h3>11.4 Counter-Notice</h3>
+        <p>
+            Agar aapka content galat tarike se remove hua hai, toh aap
+            counter-notice bhej sakte hain. Isme bhi wahi details honi chahiye.
+        </p>
+    </section>
+
+    <!-- 12 -->
+    <section class="section" id="abuse">
+        <div class="section-header">
+            <div class="section-icon">🚨</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 12</div>
+                <h2 class="section-title">Abuse Reporting</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Agar aapko Isukobit par koi abuse ya violation dikhti hai, toh
+            humein zaroor report karein.
+        </p>
+
+        <h3>12.1 Report Karne Ka Tarika</h3>
+        <ul>
+            <li><strong>Telegram:</strong> @IsukobitSupport</li>
+            <li><strong>In-bot:</strong> <code>/report</code> command</li>
+        </ul>
+
+        <h3>12.2 Kya Report Karein</h3>
+        <ul>
+            <li>Illegal content</li>
+            <li>Copyright infringement</li>
+            <li>Spam users</li>
+            <li>Harassment</li>
+            <li>Malware files</li>
+            <li>Fake information</li>
+            <li>Impersonation</li>
+        </ul>
+
+        <h3>12.3 Report Format</h3>
+        <p>Apni report mein yeh include karein:</p>
+        <ol>
+            <li>Abuse ka type</li>
+            <li>Kahan hua (file code, user ID)</li>
+            <li>Kab hua (approximate date)</li>
+            <li>Description</li>
+            <li>Evidence (screenshots, links)</li>
+            <li>Aapka contact info</li>
+        </ol>
+
+        <h3>12.4 Response Time</h3>
+        <p>
+            Hum saari reports ko seriously lete hain. Response time:
+        </p>
+        <ul>
+            <li><strong>Critical (CSAM, terrorism):</strong> Immediate</li>
+            <li><strong>High (harassment, threats):</strong> 24 hours</li>
+            <li><strong>Medium (spam, copyright):</strong> 48-72 hours</li>
+            <li><strong>Low (general queries):</strong> 7 days</li>
+        </ul>
+    </section>
+
+    <!-- 13 -->
+    <section class="section" id="termination">
+        <div class="section-header">
+            <div class="section-icon">🔚</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 13</div>
+                <h2 class="section-title">Termination</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Hum kisi bhi user ka account kabhi bhi terminate kar sakte hain.
+        </p>
+
+        <h3>13.1 Termination Reasons</h3>
+        <ul>
+            <li>Terms of Service ka violation</li>
+            <li>Illegal content upload</li>
+            <li>Copyright infringement (repeated)</li>
+            <li>Spam behavior</li>
+            <li>Bot abuse</li>
+            <li>Fake information</li>
+            <li>Multiple reports</li>
+        </ul>
+
+        <h3>13.2 Termination Process</h3>
+        <ol>
+            <li>Report receive hoti hai</li>
+            <li>Review kiya jaata hai</li>
+            <li>User ko warning ya notice</li>
+            <li>Agar repeated, toh ban</li>
+            <li>Severe case mein direct ban</li>
+        </ol>
+
+        <h3>13.3 Effects of Termination</h3>
+        <ul>
+            <li>Bot use karne ka access block</li>
+            <li>Saari files inaccessible</li>
+            <li>Account data delete (after retention period)</li>
+            <li>No refund (agar premium tha)</li>
+        </ul>
+
+        <h3>13.4 Appeal Process</h3>
+        <p>
+            Agar aapko lagta hai ki galat tarike se ban kiya gaya, toh aap
+            appeal kar sakte hain @IsukobitSupport par 30 din ke andar.
+        </p>
+    </section>
+
+    <!-- 14 -->
+    <section class="section" id="disclaimer">
+        <div class="section-header">
+            <div class="section-icon">⚠️</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 14</div>
+                <h2 class="section-title">Disclaimer</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Isukobit <strong>"as is"</strong> aur <strong>"as available"</strong>
+            basis par provide kiya jaata hai.
+        </p>
+
+        <h3>14.1 No Warranty</h3>
+        <p>
+            Hum koi bhi warranty nahi dete:
+        </p>
+        <ul>
+            <li>Service 100% available rahegi</li>
+            <li>Files kabhi delete nahi hongi</li>
+            <li>No bugs honge</li>
+            <li>Speed consistent rahegi</li>
+            <li>Errors nahi aayenge</li>
+        </ul>
+
+        <h3>14.2 Service Availability</h3>
+        <p>
+            Service kabhi bhi band ho sakti hai:
+        </p>
+        <ul>
+            <li>Server maintenance</li>
+            <li>Technical issues</li>
+            <li>Telegram API changes</li>
+            <li>Legal requirements</li>
+            <li>Force majeure events</li>
+        </ul>
+
+        <h3>14.3 File Loss</h3>
+        <div class="alert alert-danger">
+            <div class="alert-icon">⚠️</div>
+            <div class="alert-content">
+                <strong>Warning:</strong>
+                Hum file loss ke liye responsible nahi hain. **Apni important
+                files ka backup khud rakhein.**
+            </div>
+        </div>
+
+        <h3>14.4 Third-Party Content</h3>
+        <p>
+            Isukobit par jo content hai woh users ne upload kiya hai. Hum
+            uska content verify nahi karte aur uska responsible nahi hain.
+        </p>
+    </section>
+
+    <!-- 15 -->
+    <section class="section" id="liability">
+        <div class="section-header">
+            <div class="section-icon">📉</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 15</div>
+                <h2 class="section-title">Limitation of Liability</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Maximum extent permitted by law, Isukobit team in cheezon ke liye
+            liable nahi hain:
+        </p>
+
+        <h3>15.1 Kya Cover Nahi Hota</h3>
+        <ul>
+            <li>Direct, indirect, incidental damages</li>
+            <li>Data loss</li>
+            <li>Lost profits</li>
+            <li>Business interruption</li>
+            <li>Third-party claims</li>
+            <li>Emotional distress</li>
+        </ul>
+
+        <h3>15.2 Maximum Liability</h3>
+        <p>
+            Agar hum liable hote hain, toh maximum liability aapke dwara
+            paid amount (agar kuch paid) tak limited hai.
+        </p>
+
+        <h3>15.3 Indemnification</h3>
+        <p>
+            Aap Isukobit team ko indemnify karte hain kisi bhi claims se jo
+            aapke use ke kaaran aaye.
+        </p>
+    </section>
+
+    <!-- 16 -->
+    <section class="section" id="changes">
+        <div class="section-header">
+            <div class="section-icon">🔄</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 16</div>
+                <h2 class="section-title">Changes to Terms</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Hum yeh terms kabhi bhi update kar sakte hain.
+        </p>
+
+        <h3>16.1 Notification</h3>
+        <p>
+            Material changes ke liye hum:
+        </p>
+        <ul>
+            <li>Bot ke through notification bhejenge</li>
+            <li>Update channel par post karenge</li>
+            <li>Yeh page update karenge</li>
+        </ul>
+
+        <h3>16.2 Effective Date</h3>
+        <p>
+            Changes 7 din ke notice ke baad effective honge. Aapka continued
+            use acceptance maana jayega.
+        </p>
+
+        <h3>16.3 Version History</h3>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-label">Version 2.0</div>
+                <div class="info-value">15 Feb 2026</div>
+            </div>
+            <div class="info-card">
+                <div class="info-label">Version 1.0</div>
+                <div class="info-value">01 Jan 2025</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 17 -->
+    <section class="section" id="law">
+        <div class="section-header">
+            <div class="section-icon">⚖️</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 17</div>
+                <h2 class="section-title">Governing Law</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Yeh terms India ke laws ke under govern hote hain.
+        </p>
+
+        <h3>17.1 Jurisdiction</h3>
+        <p>
+            Koi bhi legal dispute India ki courts ke jurisdiction mein hoga.
+        </p>
+
+        <h3>17.2 Dispute Resolution</h3>
+        <ol>
+            <li>Pehle informal discussion try karein</li>
+            <li>Mediation consider karein</li>
+            <li>Agar resolve nahi hota, toh arbitration</li>
+            <li>Last resort: courts</li>
+        </ol>
+
+        <h3>17.3 Severability</h3>
+        <p>
+            Agar koi clause invalid hua, toh baaki clauses valid rahenge.
+        </p>
+    </section>
+
+    <!-- 18 -->
+    <section class="section" id="contact">
+        <div class="section-header">
+            <div class="section-icon">📞</div>
+            <div class="section-title-wrap">
+                <div class="section-number">Section 18</div>
+                <h2 class="section-title">Contact Us</h2>
+                <div class="section-updated">Last updated: 15 Feb 2026</div>
+            </div>
+        </div>
+
+        <p>
+            Koi bhi sawaal, feedback, ya complaint ke liye humein contact karein:
+        </p>
+
+        <div class="contact-grid">
+            <a href="https://t.me/IsukobitSupport" class="contact-card">
+                <div class="contact-icon">💬</div>
+                <div class="contact-info">
+                    <div class="contact-label">Support</div>
+                    <div class="contact-value">@IsukobitSupport</div>
+                </div>
+            </a>
+
+            <a href="https://t.me/IsukobitUpdates" class="contact-card">
+                <div class="contact-icon">📢</div>
+                <div class="contact-info">
+                    <div class="contact-label">Updates</div>
+                    <div class="contact-value">@IsukobitUpdates</div>
+                </div>
+            </a>
+
+            <a href="https://t.me/IsukobitBot" class="contact-card">
+                <div class="contact-icon">🤖</div>
+                <div class="contact-info">
+                    <div class="contact-label">Bot</div>
+                    <div class="contact-value">@IsukobitBot</div>
+                </div>
+            </a>
+
+            <a href="mailto:legal@isukobit.com" class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-info">
+                    <div class="contact-label">Legal</div>
+                    <div class="contact-value">legal@isukobit.com</div>
+                </div>
+            </a>
+        </div>
+
+        <h3>Response Times</h3>
+        <ul>
+            <li><strong>Critical issues:</strong> 2-4 hours</li>
+            <li><strong>General queries:</strong> 24 hours</li>
+            <li><strong>Legal matters:</strong> 48-72 hours</li>
+        </ul>
+
+        <div class="alert alert-success">
+            <div class="alert-icon">🙏</div>
+            <div class="alert-content">
+                <strong>Thank you for using Isukobit!</strong>
+                Aapka trust hamare liye important hai. Hum best service provide
+                karne ki koshish karte hain.
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     🦶 FOOTER
+     ═══════════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+    <div class="footer-logo">🚀 Isukobit</div>
+    <div class="footer-tagline">
+        Telegram File Store Bot — Fast, Secure, Reliable
+    </div>
+
+    <div class="footer-links">
+        <a href="#terms">Terms</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#dmca">DMCA</a>
+        <a href="#abuse">Report Abuse</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-copy">
+        © 2026 <strong>Isukobit</strong> — All Rights Reserved<br>
+        Made with ❤️ in India
+    </div>
 </footer>
 
-<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+<!-- ═══════════════════════════════════════════════════════════════════
+     🔙 BACK TO TOP BUTTON
+     ═══════════════════════════════════════════════════════════════════ -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+</button>
 
+<!-- ═══════════════════════════════════════════════════════════════════
+     ⚙️ JAVASCRIPT
+     ═══════════════════════════════════════════════════════════════════ -->
 <script>
-// Scroll progress bar
-window.addEventListener('scroll',()=>{
-  const h=document.documentElement;
-  const pct=(h.scrollTop)/(h.scrollHeight-h.clientHeight)*100;
-  document.getElementById('progress').style.width=pct+'%';
-  document.getElementById('topBtn').classList.toggle('show',h.scrollTop>400);
-});
+(function() {
+    'use strict';
 
-// Reveal cards on scroll
-const obs=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
-},{threshold:.12});
-document.querySelectorAll('.card').forEach(c=>obs.observe(c));
+    // ═══════════════════════════════════════════════════════════════
+    // 🔙 BACK TO TOP BUTTON
+    // ═══════════════════════════════════════════════════════════════
+    const backToTop = document.getElementById('backToTop');
 
-// TOC active link highlight
-const links=document.querySelectorAll('.toc a');
-const secs=document.querySelectorAll('.card');
-window.addEventListener('scroll',()=>{
-  let cur='';
-  secs.forEach(s=>{if(scrollY>=s.offsetTop-140)cur=s.id});
-  links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+cur));
-});
+    function toggleBackToTop() {
+        if (window.scrollY > 400) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    }
+
+    backToTop.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    toggleBackToTop();
+
+    // ═══════════════════════════════════════════════════════════════
+    // 📍 SMOOTH SCROLL FOR ANCHOR LINKS
+    // ═══════════════════════════════════════════════════════════════
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                const offsetTop = target.getBoundingClientRect().top + window.scrollY - 90;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+                history.pushState(null, '', targetId);
+            }
+        });
+    });
+
+    // ═══════════════════════════════════════════════════════════════
+    // ✨ FADE-IN ANIMATION ON SCROLL
+    // ═══════════════════════════════════════════════════════════════
+    if ('IntersectionObserver' in window) {
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        sections.forEach(function(section) {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+
+        // First section visible immediately
+        if (sections.length > 0) {
+            sections[0].style.opacity = '1';
+            sections[0].style.transform = 'translateY(0)';
+        }
+    }
+
+    // ═══════════════════════════════════════════════════════════════
+    // 📊 COPY TO CLIPBOARD (Contact Info)
+    // ═══════════════════════════════════════════════════════════════
+    document.querySelectorAll('.contact-value').forEach(function(el) {
+        el.style.cursor = 'pointer';
+        el.title = 'Click to copy';
+        el.addEventListener('click', function() {
+            const text = this.textContent.trim();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text).then(function() {
+                    const original = el.textContent;
+                    el.textContent = '✅ Copied!';
+                    setTimeout(function() {
+                        el.textContent = original;
+                    }, 1000);
+                });
+            }
+        });
+    });
+
+    // ═══════════════════════════════════════════════════════════════
+    // 📅 AUTO-UPDATE YEAR IN FOOTER
+    // ═══════════════════════════════════════════════════════════════
+    const yearElements = document.querySelectorAll('.footer-copy');
+    const currentYear = new Date().getFullYear();
+    yearElements.forEach(function(el) {
+        el.innerHTML = el.innerHTML.replace(/© \d{4}/, '© ' + currentYear);
+    });
+
+    // ═══════════════════════════════════════════════════════════════
+    // ⚡ LOADING PERFORMANCE
+    // ═══════════════════════════════════════════════════════════════
+    window.addEventListener('load', function() {
+        console.log('🚀 Isukobit Terms & Privacy Page Loaded');
+        console.log('📅 Last Updated: 15 Feb 2026');
+        console.log('📄 Version: 2.0');
+    });
+
+})();
 </script>
 
 </body>
