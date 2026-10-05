@@ -4,15 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Isukobit — Terms of Service, Privacy Policy, DMCA & Content Policy">
-<meta name="keywords" content="isukobit, terms, privacy, dmca, file store bot, telegram">
+<meta name="keywords" content="isukobit, terms, privacy, dmca, file store bot, telegram, 18+">
 <meta name="author" content="Isukobit Team">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0088cc">
-<title>Isukobit — Terms, Privacy & Policies</title>
+<meta name="rating" content="adult">
+<meta name="age-rating" content="18+">
+<title>Isukobit — Terms, Privacy & Policies (18+)</title>
 
 <style>
 /* ═══════════════════════════════════════════════════════════════════
-   🎨 GLOBAL RESET & VARIABLES
+   GLOBAL RESET & VARIABLES
    ═══════════════════════════════════════════════════════════════════ */
 * {
     margin: 0;
@@ -37,6 +39,7 @@
     --warning: #ffb340;
     --danger: #ff5c5c;
     --info: #4da6ff;
+    --adult: #ff6b9d;
     --radius: 12px;
     --radius-sm: 8px;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -60,7 +63,35 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   🔝 HEADER
+   AGE WARNING BANNER
+   ═══════════════════════════════════════════════════════════════════ */
+.age-banner {
+    background: linear-gradient(135deg, #ff5c5c, #ff6b9d);
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.age-banner-icon {
+    font-size: 18px;
+}
+
+.age-banner strong {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 800;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   HEADER
    ═══════════════════════════════════════════════════════════════════ */
 .header {
     position: sticky;
@@ -142,7 +173,6 @@ body {
     background: var(--primary-dark);
 }
 
-/* Mobile header */
 @media (max-width: 640px) {
     .header-nav {
         display: none;
@@ -153,7 +183,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   🌊 HERO SECTION
+   HERO SECTION
    ═══════════════════════════════════════════════════════════════════ */
 .hero {
     padding: 60px 20px 40px;
@@ -226,6 +256,12 @@ body {
     color: var(--text);
 }
 
+.badge-adult {
+    background: rgba(255, 107, 157, 0.15);
+    border-color: var(--adult);
+    color: #ffb6d3;
+}
+
 .badge-icon {
     font-size: 14px;
 }
@@ -237,7 +273,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   📋 TABLE OF CONTENTS
+   TABLE OF CONTENTS
    ═══════════════════════════════════════════════════════════════════ */
 .toc {
     max-width: 900px;
@@ -313,7 +349,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   📄 CONTENT AREA
+   CONTENT AREA
    ═══════════════════════════════════════════════════════════════════ */
 .container {
     max-width: 900px;
@@ -357,6 +393,16 @@ body {
     font-size: 24px;
     flex-shrink: 0;
     box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+}
+
+.section-icon.adult {
+    background: linear-gradient(135deg, #ff6b9d, #ff5c5c);
+    box-shadow: 0 4px 12px rgba(255, 107, 157, 0.3);
+}
+
+.section-icon.danger {
+    background: linear-gradient(135deg, #ff5c5c, #cc0000);
+    box-shadow: 0 4px 12px rgba(255, 92, 92, 0.3);
 }
 
 .section-title-wrap {
@@ -414,6 +460,14 @@ body {
     border-radius: 2px;
 }
 
+.section h3.adult::before {
+    background: var(--adult);
+}
+
+.section h3.danger::before {
+    background: var(--danger);
+}
+
 .section h4 {
     font-size: 15px;
     font-weight: 600;
@@ -460,7 +514,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   ⚠️ ALERT BOXES
+   ALERT BOXES
    ═══════════════════════════════════════════════════════════════════ */
 .alert {
     display: flex;
@@ -512,8 +566,14 @@ body {
     color: #d4f5d9;
 }
 
+.alert-adult {
+    background: rgba(255, 107, 157, 0.1);
+    border-color: var(--adult);
+    color: #ffcce0;
+}
+
 /* ═══════════════════════════════════════════════════════════════════
-   📊 INFO GRID
+   INFO GRID
    ═══════════════════════════════════════════════════════════════════ */
 .info-grid {
     display: grid;
@@ -552,7 +612,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   📋 DO / DON'T LISTS
+   DO / DON'T LISTS
    ═══════════════════════════════════════════════════════════════════ */
 .do-dont-grid {
     display: grid;
@@ -618,7 +678,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   📞 CONTACT CARDS
+   CONTACT CARDS
    ═══════════════════════════════════════════════════════════════════ */
 .contact-grid {
     display: grid;
@@ -680,7 +740,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   🔙 BACK TO TOP
+   BACK TO TOP
    ═══════════════════════════════════════════════════════════════════ */
 .back-to-top {
     position: fixed;
@@ -716,7 +776,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   🦶 FOOTER
+   FOOTER
    ═══════════════════════════════════════════════════════════════════ */
 .footer {
     background: var(--bg-secondary);
@@ -772,7 +832,7 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   📱 MOBILE RESPONSIVE
+   MOBILE RESPONSIVE
    ═══════════════════════════════════════════════════════════════════ */
 @media (max-width: 640px) {
     body {
@@ -832,10 +892,10 @@ body {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   🖨️ PRINT STYLES
+   PRINT STYLES
    ═══════════════════════════════════════════════════════════════════ */
 @media print {
-    .header, .back-to-top, .footer-links {
+    .header, .back-to-top, .footer-links, .age-banner {
         display: none;
     }
 
@@ -858,9 +918,14 @@ body {
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════════════
-     🔝 HEADER
-     ═══════════════════════════════════════════════════════════════════ -->
+<!-- AGE WARNING BANNER -->
+<div class="age-banner">
+    <span class="age-banner-icon">🔞</span>
+    <span>This bot is for <strong>18+</strong> users. Adult content is allowed.</span>
+    <span class="age-banner-icon">⚠️</span>
+</div>
+
+<!-- HEADER -->
 <header class="header">
     <a href="/" class="header-logo">
         <div class="header-logo-icon">🚀</div>
@@ -877,14 +942,12 @@ body {
     </nav>
 </header>
 
-<!-- ═══════════════════════════════════════════════════════════════════
-     🌊 HERO
-     ═══════════════════════════════════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero">
     <h1>Terms, Privacy & Policies</h1>
     <p>
-        Isukobit use karne se pehle yeh page zaroor padhein. Aapki privacy,
-        rights aur responsibilities sab yahan clear kiye gaye hain.
+        Please read this page carefully before using Isukobit. Your privacy,
+        rights, and responsibilities are all clearly explained here.
     </p>
     <div class="hero-badges">
         <span class="badge">
@@ -893,7 +956,11 @@ body {
         </span>
         <span class="badge">
             <span class="badge-icon">📜</span>
-            Version 2.0
+            Version 3.0
+        </span>
+        <span class="badge badge-adult">
+            <span class="badge-icon">🔞</span>
+            18+ Content
         </span>
         <span class="badge">
             <span class="badge-icon">🌍</span>
@@ -902,9 +969,7 @@ body {
     </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════════════
-     📋 TABLE OF CONTENTS
-     ═══════════════════════════════════════════════════════════════════ -->
+<!-- TABLE OF CONTENTS -->
 <div class="toc">
     <div class="toc-card">
         <div class="toc-title">
@@ -922,9 +987,9 @@ body {
                 Acceptance of Terms
                 <span class="toc-item-num">02</span>
             </a>
-            <a href="#eligibility" class="toc-item">
-                <span class="toc-item-icon">👤</span>
-                Eligibility
+            <a href="#age" class="toc-item">
+                <span class="toc-item-icon">🔞</span>
+                Age Requirement (18+)
                 <span class="toc-item-num">03</span>
             </a>
             <a href="#account" class="toc-item">
@@ -937,9 +1002,9 @@ body {
                 Acceptable Use
                 <span class="toc-item-num">05</span>
             </a>
-            <a href="#prohibited" class="toc-item">
-                <span class="toc-item-icon">🚫</span>
-                Prohibited Content
+            <a href="#adult" class="toc-item">
+                <span class="toc-item-icon">🔞</span>
+                Adult Content Policy
                 <span class="toc-item-num">06</span>
             </a>
             <a href="#copyright" class="toc-item">
@@ -1006,9 +1071,7 @@ body {
     </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════
-     📄 MAIN CONTENT
-     ═══════════════════════════════════════════════════════════════════ -->
+<!-- MAIN CONTENT -->
 <div class="container">
 
     <!-- 01 -->
@@ -1023,17 +1086,17 @@ body {
         </div>
 
         <p>
-            <strong>Isukobit</strong> ek Telegram-based File Store Bot hai jo users ko
-            files upload, search, download aur manage karne ki suvidha deta hai.
-            Hamara bot Telegram ke official Bot API platform par kaam karta hai
-            aur user-generated content ko store aur share karne ki facility deta hai.
+            <strong>Isukobit</strong> is a Telegram-based File Store Bot that
+            allows users to upload, search, download, and manage files. Our bot
+            operates on Telegram's official Bot API platform and provides
+            facilities to store and share user-generated content.
         </p>
 
         <p>
-            Isukobit koi bhi file khud host nahi karta. Saari files Telegram ke
-            secure servers par store hoti hain aur bot sirf unhe reference
-            karta hai. Hum ek <strong>middleware service</strong> hain jo aapko
-            files access karne mein madad karta hai.
+            Isukobit is a <strong>passive middleware service</strong>. We do not
+            host, create, or verify any files ourselves. All files are stored on
+            Telegram's secure servers, and the bot only references them. We are
+            an intermediary platform, just like Telegram itself.
         </p>
 
         <div class="info-grid">
@@ -1047,11 +1110,11 @@ body {
             </div>
             <div class="info-card">
                 <div class="info-label">Service Type</div>
-                <div class="info-value">File Storage Middleware</div>
+                <div class="info-value">Passive Middleware</div>
             </div>
             <div class="info-card">
-                <div class="info-label">Country</div>
-                <div class="info-value">India</div>
+                <div class="info-label">Content Rating</div>
+                <div class="info-value">18+ (Adult Allowed)</div>
             </div>
         </div>
 
@@ -1059,8 +1122,8 @@ body {
             <div class="alert-icon">💡</div>
             <div class="alert-content">
                 <strong>Important:</strong>
-                Isukobit Telegram ka official product nahi hai. Yeh ek independent
-                third-party service hai jo Telegram Bot API ka use karke chalti hai.
+                Isukobit is not an official Telegram product. It is an independent
+                third-party service that operates using the Telegram Bot API.
             </div>
         </div>
     </section>
@@ -1077,84 +1140,103 @@ body {
         </div>
 
         <p>
-            Isukobit bot ko use karne se pehle, aapko yeh Terms of Service,
-            Privacy Policy, aur saari related policies **zaroor padhni chahiye**.
-            Bot ko use karke aap automatically in sabhi terms se sehmat ho jate hain.
+            Before using the Isukobit bot, you must read these Terms of Service,
+            Privacy Policy, and all related policies. By using the bot, you
+            automatically agree to all of these terms.
         </p>
 
         <h3>2.1 Agreement</h3>
         <p>
-            Jab aap Isukobit bot ko Telegram par start karte hain, koi bhi file
-            upload karte hain, ya koi bhi feature use karte hain, toh aap
-            automatically agree karte hain:
+            When you start the Isukobit bot on Telegram, upload any file, or use
+            any feature, you automatically agree to:
         </p>
         <ul>
-            <li>Yeh saare Terms of Service accept karte hain</li>
-            <li>Privacy Policy se sehmat hain</li>
-            <li>Copyright aur DMCA policy follow karenge</li>
-            <li>Acceptable Use Policy ka paalan karenge</li>
+            <li>Accept all of these Terms of Service</li>
+            <li>Agree to the Privacy Policy</li>
+            <li>Follow the Copyright and DMCA policy</li>
+            <li>Comply with the Acceptable Use Policy</li>
+            <li><strong>Meet the 18+ age requirement</strong></li>
         </ul>
 
-        <h3>2.2 Aap Agar Sehmat Nahi Ho</h3>
+        <h3>2.2 If You Do Not Agree</h3>
         <p>
-            Agar aap in terms se **sehmat nahi hain**, toh kripya bot ka use
-            **turant band kar dein**. Iska matlab aap bot use nahi kar sakte.
+            If you <strong>do not agree</strong> to these terms, please
+            <strong>stop using the bot immediately</strong>. This means you cannot
+            use the bot.
         </p>
 
-        <h3>2.3 Age Requirement</h3>
+        <h3>2.3 User Responsibility</h3>
         <p>
-            Isukobit use karne ke liye aapki age <strong>13 saal ya usse zyada</strong>
-            honi chahiye. Agar aap 13 saal se chhote hain, toh aapko bot use
-            karne ki permission nahi hai.
+            Isukobit is a <strong>passive platform</strong>. You are
+            <strong>fully responsible</strong> for any content you upload.
+            We do not pre-screen or verify any content.
         </p>
 
         <div class="alert alert-warning">
             <div class="alert-icon">⚠️</div>
             <div class="alert-content">
-                <strong>Warning:</strong>
-                Agar aap minor hain, toh apne parents ya guardians ki permission
-                ke bina bot use na karein.
+                <strong>Important:</strong>
+                You bear the legal responsibility for every file you upload.
+                Isukobit is just a tool — just like Google Drive or Telegram itself.
             </div>
         </div>
     </section>
 
     <!-- 03 -->
-    <section class="section" id="eligibility">
+    <section class="section" id="age">
         <div class="section-header">
-            <div class="section-icon">👤</div>
+            <div class="section-icon adult">🔞</div>
             <div class="section-title-wrap">
                 <div class="section-number">Section 03</div>
-                <h2 class="section-title">Eligibility</h2>
+                <h2 class="section-title">Age Requirement (18+)</h2>
                 <div class="section-updated">Last updated: 15 Feb 2026</div>
             </div>
         </div>
 
         <p>
-            Isukobit ka use karne ke liye aapko kuch eligibility criteria
-            fulfill karne honge:
+            <strong>Adult content (18+) is allowed</strong> on Isukobit.
+            Therefore, this bot is only for users who are <strong>18 years of
+            age or older</strong>.
         </p>
 
-        <h3>3.1 Basic Requirements</h3>
+        <h3 class="adult">3.1 Age Requirement</h3>
         <ul>
-            <li><strong>Age:</strong> Kam se kam 13 saal ki umar</li>
-            <li><strong>Telegram Account:</strong> Ek valid Telegram account</li>
-            <li><strong>Internet:</strong> Stable internet connection</li>
-            <li><strong>Legal Capacity:</strong> Contracts karne ki legal capacity</li>
+            <li>You must be at least <strong>18 years old</strong></li>
+            <li>You are legally an adult in your jurisdiction</li>
+            <li>You are legally eligible to view adult content</li>
+            <li>You agree to follow the laws of your area</li>
         </ul>
 
-        <h3>3.2 Kya Aap Eligible Nahi Hain Agar</h3>
+        <h3 class="adult">3.2 You Are Not Eligible If</h3>
         <ul>
-            <li>Aap pehle banned kar diye gaye hain Isukobit se</li>
-            <li>Aapka Telegram account restricted hai</li>
-            <li>Aap kisi sanctioned country mein reside karte hain</li>
-            <li>Aapka intention illegal activities mein hai</li>
+            <li>You are under 18 years of age</li>
+            <li>Adult content is illegal in your country</li>
+            <li>You have been previously banned from Isukobit</li>
+            <li>Your Telegram account is restricted</li>
+            <li>You reside in a sanctioned country</li>
         </ul>
 
-        <h3>3.3 Regional Restrictions</h3>
+        <h3 class="adult">3.3 Age Verification</h3>
         <p>
-            Kuch countries mein file sharing services restricted hain. Aap khud
-            responsible hain yeh ensure karne ke liye ki aapka use local laws
-            ke according legal hai.
+            Isukobit does <strong>not actively verify age</strong>. When you use
+            the bot, you declare yourself that you are 18+. If you are a minor
+            and still use the bot, the consequences are your own responsibility.
+        </p>
+
+        <div class="alert alert-adult">
+            <div class="alert-icon">🔞</div>
+            <div class="alert-content">
+                <strong>18+ Only:</strong>
+                If you are under 18 years of age, please stop using Isukobit
+                immediately. We do not knowingly collect any data from minors.
+            </div>
+        </div>
+
+        <h3>3.4 Regional Restrictions</h3>
+        <p>
+            Adult content and file-sharing services are restricted in some
+            countries. You are responsible for ensuring that your use is legal
+            under your local laws.
         </p>
     </section>
 
@@ -1170,50 +1252,50 @@ body {
         </div>
 
         <p>
-            Isukobit Telegram account ke through automatically register karta hai.
-            Aapko alag se signup karne ki zaroorat nahi hai. Lekin aapki
-            responsibilities hain:
+            Isukobit automatically registers you through your Telegram account.
+            You do not need to sign up separately. However, you have
+            responsibilities:
         </p>
 
         <h3>4.1 Account Information</h3>
         <p>
-            Hum yeh information store karte hain jab aap bot use karte hain:
+            We store the following information when you use the bot:
         </p>
         <ul>
             <li>Telegram User ID (public)</li>
-            <li>First Name aur Last Name (public)</li>
+            <li>First Name and Last Name (public)</li>
             <li>Username (public)</li>
             <li>Language preference</li>
             <li>Upload/download history</li>
-            <li>Join date aur last activity</li>
+            <li>Join date and last activity</li>
         </ul>
 
-        <h3>4.2 Aapki Responsibilities</h3>
+        <h3>4.2 Your Responsibilities</h3>
         <ul>
-            <li>Apni account activity ke liye aap khud responsible hain</li>
-            <li>Kisi aur ke account se bot use mat karein</li>
-            <li>Apni files ka backup khud rakhein</li>
-            <li>Bot ke misuse ke liye aap accountable honge</li>
+            <li>You are responsible for your account activity</li>
+            <li>Do not use the bot from someone else's account</li>
+            <li>Keep your own backups of your files</li>
+            <li>You will be accountable for any misuse of the bot</li>
+            <li><strong>You are legally responsible for uploaded content</strong></li>
         </ul>
 
         <h3>4.3 Account Restrictions</h3>
         <p>
-            Hum kisi bhi account ko bina notice ke ban, restrict, ya suspend
-            kar sakte hain agar:
+            We may ban, restrict, or suspend any account without notice if:
         </p>
         <ul>
-            <li>Terms ka violation ho</li>
-            <li>Spam ya abusive behavior ho</li>
-            <li>Illegal content upload ho</li>
-            <li>Copyright infringement ho</li>
-            <li>Bot pe attack ki koshish ho</li>
+            <li>Terms are violated</li>
+            <li>There is spam or abusive behavior</li>
+            <li>CSAM or illegal content is uploaded</li>
+            <li>A DMCA order arrives from Telegram</li>
+            <li>An attempt is made to attack the bot</li>
         </ul>
 
         <div class="alert alert-danger">
             <div class="alert-icon">🚫</div>
             <div class="alert-content">
                 <strong>Important:</strong>
-                Account ban karne ka faisla final hoga aur koi refund nahi milega.
+                The decision to ban an account is final and no refund will be given.
             </div>
         </div>
     </section>
@@ -1230,45 +1312,47 @@ body {
         </div>
 
         <p>
-            Isukobit ek file storage aur sharing platform hai. Aap yeh bot
-            legit purposes ke liye use kar sakte hain:
+            Isukobit is a file storage and sharing platform. You may use this
+            bot in a <strong>very flexible</strong> manner:
         </p>
 
         <div class="do-dont-grid">
             <div class="do-list">
-                <h4>✅ Aap Kar Sakte Hain</h4>
+                <h4>✅ You May Do</h4>
                 <ul>
-                    <li>Personal documents store karna</li>
-                    <li>Study material share karna</li>
-                    <li>Business files backup karna</li>
-                    <li>Legal media content store karna</li>
-                    <li>Apni files organize karna</li>
-                    <li>Trusted logo ke saath share karna</li>
-                    <li>Open source files distribute karna</li>
+                    <li>Store personal documents</li>
+                    <li>Share study material</li>
+                    <li>Back up business files</li>
+                    <li>Store media content</li>
+                    <li>Organize your files</li>
+                    <li>Share adult content (18+)</li>
+                    <li>Share files with the community</li>
+                    <li>Distribute public domain files</li>
                 </ul>
             </div>
             <div class="dont-list">
-                <h4>❌ Aap Nahi Kar Sakte</h4>
+                <h4>❌ You May Not Do</h4>
                 <ul>
-                    <li>Copyrighted content share karna</li>
-                    <li>Illegal material upload karna</li>
-                    <li>Malware ya virus distribute karna</li>
-                    <li>Spam content bhejna</li>
-                    <li>Adult content (jahan restricted ho)</li>
-                    <li>Kisi ki personal info share karna</li>
-                    <li>Bot ko abuse karna</li>
+                    <li>CSAM (child abuse material)</li>
+                    <li>Terrorism / extremism content</li>
+                    <li>Distribute malware or viruses</li>
+                    <li>Doxxing (personal info leak)</li>
+                    <li>Non-consensual intimate images</li>
+                    <li>Direct bot abuse / attacks</li>
+                    <li>Revenge porn</li>
+                    <li>Human trafficking content</li>
                 </ul>
             </div>
         </div>
 
         <h3>5.1 Fair Usage</h3>
         <p>
-            Isukobit fair usage policy follow karta hai. Agar aap excessive
-            use karte hain jo server performance ko affect karta hai, toh
-            hum aapko restrict kar sakte hain.
+            Isukobit follows a fair usage policy. If you use the service
+            excessively in a way that affects server performance, we may
+            temporarily restrict you.
         </p>
 
-        <h3>5.2 File Size Limit</h3>
+        <h3>5.2 File Size Limits</h3>
         <div class="info-grid">
             <div class="info-card">
                 <div class="info-label">Max Upload (Bot API)</div>
@@ -1290,75 +1374,60 @@ body {
     </section>
 
     <!-- 06 -->
-    <section class="section" id="prohibited">
+    <section class="section" id="adult">
         <div class="section-header">
-            <div class="section-icon">🚫</div>
+            <div class="section-icon adult">🔞</div>
             <div class="section-title-wrap">
                 <div class="section-number">Section 06</div>
-                <h2 class="section-title">Prohibited Content</h2>
+                <h2 class="section-title">Adult Content Policy</h2>
                 <div class="section-updated">Last updated: 15 Feb 2026</div>
             </div>
         </div>
 
         <p>
-            Isukobit par kuch bhi content upload karna **strictly prohibited** hai.
-            Agar aap karte hain, toh aapka account permanently ban ho sakta hai
-            aur legal action bhi liya ja sakta hai.
+            <strong>Adult content (18+) is allowed</strong> on Isukobit. However,
+            it has its own rules and limitations.
         </p>
 
-        <h3>6.1 Illegal Content</h3>
+        <h3 class="adult">6.1 Allowed Adult Content</h3>
         <ul>
-            <li>Child sexual abuse material (CSAM) — <strong>zero tolerance</strong></li>
-            <li>Human trafficking related content</li>
-            <li>Terrorism ya extremism promotion</li>
-            <li>Weapons ya explosives instructions</li>
-            <li>Drug manufacturing guides</li>
-            <li>Hacking ya cracking tools</li>
-            <li>Stolen data ya credentials</li>
+            <li>Adult movies and videos (18+)</li>
+            <li>Adult photos and images</li>
+            <li>Adult comics and manga</li>
+            <li>Erotic literature</li>
+            <li>Adult entertainment content</li>
         </ul>
 
-        <h3>6.2 Copyrighted Content</h3>
+        <h3 class="danger">6.2 Strictly Prohibited (Zero Tolerance)</h3>
         <ul>
-            <li>Pirated movies, songs, software</li>
-            <li>Paid courses tanpa permission</li>
-            <li>Books ki scanned copies</li>
-            <li>Proprietary software cracks</li>
-            <li>Kisi bhi paid content ka unauthorized copy</li>
-        </ul>
-
-        <h3>6.3 Harmful Content</h3>
-        <ul>
-            <li>Malware, ransomware, trojans</li>
-            <li>Phishing pages</li>
-            <li>Scam material</li>
-            <li>Spam databases</li>
-            <li>Fake documents</li>
-        </ul>
-
-        <h3>6.4 Adult Content</h3>
-        <ul>
-            <li>Explicit sexual content (jahan banned ho)</li>
-            <li>Non-consensual intimate images</li>
+            <li><strong>CSAM (Child Sexual Abuse Material)</strong> — immediate ban + report</li>
+            <li>Non-consensual intimate imagery (NCII)</li>
             <li>Revenge porn</li>
+            <li>Bestiality (where illegal)</li>
             <li>Content involving minors</li>
+            <li>Rape / sexual assault content</li>
+            <li>Human trafficking content</li>
         </ul>
 
-        <h3>6.5 Harassment & Hate</h3>
-        <ul>
-            <li>Hate speech</li>
-            <li>Racial slurs</li>
-            <li>Religious intolerance</li>
-            <li>Personal attacks</li>
-            <li>Doxxing (personal info leak)</li>
-            <li>Bullying content</li>
-        </ul>
+        <h3 class="adult">6.3 Age Verification</h3>
+        <p>
+            Isukobit hosts adult content, but we do <strong>not actively verify
+            age</strong>. Users are expected to confirm themselves that they
+            are 18+.
+        </p>
 
-        <div class="alert alert-danger">
-            <div class="alert-icon">⛔</div>
+        <h3 class="adult">6.4 Jurisdiction</h3>
+        <p>
+            If you are in a country where adult content is illegal, you should
+            not use Isukobit. You are responsible for your own illegal use.
+        </p>
+
+        <div class="alert alert-adult">
+            <div class="alert-icon">🔞</div>
             <div class="alert-content">
-                <strong>Zero Tolerance:</strong>
-                CSAM aur CSAM-related content par hum **turban** action lete hain.
-                Yeh content Telegram aur law enforcement ko report kiya jaata hai.
+                <strong>Adult Content Allowed:</strong>
+                Isukobit allows adult content, but we take immediate action
+                against CSAM and non-consensual content.
             </div>
         </div>
     </section>
@@ -1375,51 +1444,63 @@ body {
         </div>
 
         <p>
-            Isukobit copyright laws ka poora samman karta hai. Agar aap koi
-            copyrighted content upload karte hain toh aap khud uske liye
-            responsible hain.
+            Isukobit is a <strong>passive intermediary platform</strong> — just
+            like Telegram and Google Drive. We do <strong>not pre-screen or
+            verify</strong> content uploaded by users.
         </p>
 
-        <h3>7.1 Aapki Responsibility</h3>
+        <h3>7.1 Intermediary Status</h3>
         <p>
-            Sirf wahi content upload karein jiska aapko:
+            Isukobit is an "intermediary" under the
+            <strong>Indian IT Act, 2000 (Section 79)</strong> and
+            <strong>DMCA Section 512</strong>. This means:
         </p>
         <ul>
-            <li>Owner hain, YA</li>
-            <li>Legal permission hai, YA</li>
-            <li>Fair use ke under aata hai, YA</li>
-            <li>Public domain mein hai</li>
+            <li>We host content but do not create it</li>
+            <li>We are not responsible for the legality of content</li>
+            <li>Copyright liability for user-uploaded content <strong>rests with the user</strong></li>
+            <li>We follow a DMCA-compliant takedown process</li>
         </ul>
 
-        <h3>7.2 Copyright Infringement Report</h3>
+        <h3>7.2 Copyright Takedown Policy</h3>
         <p>
-            Agar aapko lagta hai ki aapka copyrighted work Isukobit par
-            unauthorized tarike se upload hua hai, toh aap DMCA takedown
-            notice bhej sakte hain.
+            Copyrighted content on Isukobit is <strong>not automatically
+            removed</strong>. Content is only removed when:
+        </p>
+        <ul>
+            <li>An <strong>official DMCA notice</strong> arrives from Telegram</li>
+            <li>A copyright holder sends a <strong>legal takedown request</strong></li>
+            <li>A court order is issued</li>
+            <li>Content is clearly CSAM or otherwise illegal</li>
+        </ul>
+
+        <h3>7.3 Your Responsibility</h3>
+        <p>
+            You are <strong>fully responsible</strong> for any content you upload.
+            Only upload content that:
+        </p>
+        <ul>
+            <li>You own, OR</li>
+            <li>You have legal permission for, OR</li>
+            <li>Falls under fair use, OR</li>
+            <li>Is in the public domain</li>
+        </ul>
+
+        <h3>7.4 Repeat Infringer Policy</h3>
+        <p>
+            If a user receives <strong>3 or more valid DMCA complaints</strong>,
+            their account may be permanently banned.
         </p>
 
-        <h3>7.3 DMCA Notice Requirements</h3>
-        <p>
-            Aapka notice is tarah hona chahiye:
-        </p>
-        <ol>
-            <li>Aapki physical ya electronic signature</li>
-            <li>Copyrighted work ka description</li>
-            <li>Infringing material ka location (URL ya file code)</li>
-            <li>Aapka contact info (email, phone)</li>
-            <li>Good faith statement</li>
-            <li>Perjury statement</li>
-        </ol>
-
-        <p>
-            Complete DMCA notice ke liye <a href="#dmca">Section 11</a> dekhein.
-        </p>
-
-        <h3>7.4 Counter-Notice</h3>
-        <p>
-            Agar aapko lagta hai ki aapka content galat tarike se remove hua
-            hai, toh aap counter-notice bhej sakte hain.
-        </p>
+        <div class="alert alert-info">
+            <div class="alert-icon">📋</div>
+            <div class="alert-content">
+                <strong>For Copyright Holders:</strong>
+                If you find your copyrighted work on Isukobit, send us a DMCA
+                notice. We will take action on valid notices within 48-72 hours.
+                Details are in Section 11.
+            </div>
+        </div>
     </section>
 
     <!-- 08 -->
@@ -1434,9 +1515,8 @@ body {
         </div>
 
         <p>
-            Aapki privacy hamare liye sabse important hai. Yeh section batata
-            hai ki hum kaunsi information collect karte hain, kaise use karte
-            hain, aur kaise protect karte hain.
+            Your privacy is most important to us. This section explains what
+            information we collect, how we use it, and how we protect it.
         </p>
 
         <h3>8.1 Data Controller</h3>
@@ -1451,28 +1531,28 @@ body {
             </div>
         </div>
 
-        <h3>8.2 Aapke Rights</h3>
-        <p>Aapko yeh rights hain:</p>
+        <h3>8.2 Your Rights</h3>
+        <p>You have the following rights:</p>
         <ul>
-            <li><strong>Access:</strong> Apna data dekhne ka haq</li>
-            <li><strong>Correction:</strong> Galat data correct karwane ka haq</li>
-            <li><strong>Deletion:</strong> Apna data delete karwane ka haq</li>
-            <li><strong>Portability:</strong> Data export karne ka haq</li>
-            <li><strong>Objection:</strong> Data processing object karne ka haq</li>
-            <li><strong>Restriction:</strong> Data processing restrict karne ka haq</li>
+            <li><strong>Access:</strong> Right to view your data</li>
+            <li><strong>Correction:</strong> Right to correct wrong data</li>
+            <li><strong>Deletion:</strong> Right to delete your data</li>
+            <li><strong>Portability:</strong> Right to export your data</li>
+            <li><strong>Objection:</strong> Right to object to data processing</li>
+            <li><strong>Restriction:</strong> Right to restrict data processing</li>
         </ul>
 
         <h3>8.3 GDPR Compliance</h3>
         <p>
-            Agar aap EU citizen hain, toh GDPR ke under aapko additional
-            rights milte hain. Hum GDPR comply karte hain.
+            If you are an EU citizen, you have additional rights under GDPR.
+            We comply with GDPR.
         </p>
 
         <h3>8.4 Children's Privacy (COPPA)</h3>
         <p>
-            Hum 13 saal se chhote bachcho se knowingly data collect nahi karte.
-            Agar aapko lagta hai ki aapke bachche ne data diya hai, toh
-            humein contact karein.
+            We do not knowingly collect data from children under 18. If you
+            believe a child has provided us with data, please contact us —
+            we will delete the data immediately.
         </p>
     </section>
 
@@ -1488,23 +1568,23 @@ body {
         </div>
 
         <p>
-            Hum minimal data collect karte hain, aur woh bhi sirf service
-            provide karne ke liye. Neeche detail mein bataya gaya hai:
+            We collect minimal data, and only to provide the service. Details
+            are below:
         </p>
 
-        <h3>9.1 Kya Data Collect Karte Hain</h3>
+        <h3>9.1 What Data We Collect</h3>
         <ul>
             <li><strong>Telegram User ID:</strong> Unique identifier</li>
-            <li><strong>First Name & Last Name:</strong> Display ke liye</li>
-            <li><strong>Username:</strong> Reference ke liye</li>
-            <li><strong>Language:</strong> Preference ke liye</li>
+            <li><strong>First Name & Last Name:</strong> For display</li>
+            <li><strong>Username:</strong> For reference</li>
+            <li><strong>Language:</strong> For preferences</li>
             <li><strong>File metadata:</strong> File name, size, type</li>
-            <li><strong>Upload date:</strong> Tracking ke liye</li>
-            <li><strong>Download count:</strong> Statistics ke liye</li>
-            <li><strong>Activity timestamps:</strong> Session management ke liye</li>
+            <li><strong>Upload date:</strong> For tracking</li>
+            <li><strong>Download count:</strong> For statistics</li>
+            <li><strong>Activity timestamps:</strong> For session management</li>
         </ul>
 
-        <h3>9.2 Kya Data NAHI Collect Karte</h3>
+        <h3>9.2 What Data We Do NOT Collect</h3>
         <ul>
             <li>Phone number</li>
             <li>Email address</li>
@@ -1516,15 +1596,15 @@ body {
         </ul>
 
         <h3>9.3 Data Usage</h3>
-        <p>Hum aapka data in purposes ke liye use karte hain:</p>
+        <p>We use your data for the following purposes:</p>
         <ul>
-            <li>Bot service provide karna</li>
-            <li>File upload/download handle karna</li>
+            <li>Providing bot service</li>
+            <li>Handling file uploads/downloads</li>
             <li>User authentication</li>
-            <li>Statistics generate karna</li>
+            <li>Generating statistics</li>
             <li>Spam prevention</li>
             <li>Bug fixing</li>
-            <li>Feature improvement</li>
+            <li>DMCA compliance</li>
         </ul>
 
         <h3>9.4 Data Retention</h3>
@@ -1549,13 +1629,13 @@ body {
 
         <h3>9.5 Data Sharing</h3>
         <p>
-            Hum aapka data <strong>kabhi kisi third party ko nahi bechte</strong>.
-            Data sirf in cases mein share hota hai:
+            We <strong>never sell your data</strong> to any third party. Data
+            is only shared in these cases:
         </p>
         <ul>
-            <li>Legal requirement (court order)</li>
-            <li>User ne khud permission di</li>
-            <li>Service providers (jinke saath agreement hai)</li>
+            <li>Legal requirement (court order, DMCA)</li>
+            <li>You gave permission yourself</li>
+            <li>CSAM report — to law enforcement</li>
         </ul>
     </section>
 
@@ -1571,17 +1651,17 @@ body {
         </div>
 
         <p>
-            Hum aapka data secure rakhne ke liye multiple layers use karte hain:
+            We use multiple layers to keep your data secure:
         </p>
 
         <h3>10.1 Technical Measures</h3>
         <ul>
-            <li><strong>Encryption:</strong> Sensitive data encrypted store hota hai</li>
+            <li><strong>Encryption:</strong> Sensitive data stored encrypted</li>
             <li><strong>HTTPS:</strong> All communication encrypted</li>
             <li><strong>SQL Injection Protection:</strong> Parameterized queries</li>
-            <li><strong>Rate Limiting:</strong> Spam aur abuse se protection</li>
-            <li><strong>Input Validation:</strong> Malicious input block</li>
-            <li><strong>Secure Session Management:</strong> Session token expire</li>
+            <li><strong>Rate Limiting:</strong> Protection from spam and abuse</li>
+            <li><strong>Input Validation:</strong> Malicious input blocked</li>
+            <li><strong>Secure Session Management:</strong> Session token expiry</li>
         </ul>
 
         <h3>10.2 Organizational Measures</h3>
@@ -1597,15 +1677,15 @@ body {
             <div class="alert-icon">⚠️</div>
             <div class="alert-content">
                 <strong>Important:</strong>
-                Koi bhi system 100% secure nahi hota. Hum best effort karte hain,
-                lekin absolute security ki guarantee nahi de sakte.
+                No system is 100% secure. We do our best, but we cannot
+                guarantee absolute security.
             </div>
         </div>
 
         <h3>10.4 Data Breach Notification</h3>
         <p>
-            Agar koi data breach hoti hai, toh hum 72 ghante ke andar affected
-            users ko notify karenge.
+            If a data breach occurs, we will notify affected users within
+            72 hours.
         </p>
     </section>
 
@@ -1621,50 +1701,63 @@ body {
         </div>
 
         <p>
-            Isukobit DMCA (Digital Millennium Copyright Act) comply karta hai.
-            Agar aapko copyright infringement dikhti hai, toh aap takedown
-            notice bhej sakte hain.
+            Isukobit complies with the <strong>DMCA (Digital Millennium
+            Copyright Act)</strong> and the <strong>Indian IT Act</strong>.
+            Proper takedown process must be followed to remove content.
         </p>
 
-        <h3>11.1 DMCA Notice Format</h3>
-        <p>Apna notice <a href="#contact">@IsukobitSupport</a> par bhejein:</p>
+        <h3>11.1 When Content Will Be Removed</h3>
+        <p>
+            Content on Isukobit is <strong>not automatically removed</strong>.
+            Content will only be removed when:
+        </p>
+        <ol>
+            <li>An <strong>official DMCA notice</strong> arrives from Telegram</li>
+            <li>A <strong>valid legal notice</strong> arrives from the copyright owner</li>
+            <li>A court order is issued</li>
+            <li>CSAM or clearly illegal content is detected</li>
+            <li>There is a direct threat to safety</li>
+        </ol>
+
+        <h3>11.2 DMCA Notice Format</h3>
+        <p>Send your notice to <a href="#contact">@IsukobitSupport</a>:</p>
 
         <div class="alert alert-info">
             <div class="alert-icon">📝</div>
             <div class="alert-content">
                 <strong>Subject:</strong> DMCA Takedown Notice<br>
                 <strong>To:</strong> @IsukobitSupport<br>
-                <strong>Include:</strong> Neeche di gayi saari details
+                <strong>Include:</strong> All details listed below
             </div>
         </div>
 
-        <h3>11.2 Notice Contents</h3>
+        <h3>11.3 Notice Contents (Required)</h3>
         <ol>
             <li>
-                <strong>Identification of Work:</strong> Aapka copyrighted work
-                kya hai (title, description, registration)
+                <strong>Identification of Work:</strong> What is your
+                copyrighted work (title, description, registration number)
             </li>
             <li>
-                <strong>Infringing Material:</strong> Isukobit par kahan hai
-                (file code, URL)
+                <strong>Infringing Material:</strong> Where is it on Isukobit
+                (file code, URL, exact location)
             </li>
             <li>
-                <strong>Your Contact Info:</strong> Naam, email, phone, address
+                <strong>Your Contact Info:</strong> Name, email, phone, address
             </li>
             <li>
                 <strong>Good Faith Statement:</strong> "I believe in good faith
-                that the use is not authorized..."
+                that the use is not authorized by the copyright owner..."
             </li>
             <li>
                 <strong>Accuracy Statement:</strong> "Under penalty of perjury,
-                the information is accurate..."
+                the information in this notice is accurate..."
             </li>
             <li>
-                <strong>Signature:</strong> Physical ya electronic
+                <strong>Signature:</strong> Physical or electronic signature
             </li>
         </ol>
 
-        <h3>11.3 Action Timeline</h3>
+        <h3>11.4 Action Timeline</h3>
         <div class="info-grid">
             <div class="info-card">
                 <div class="info-label">Acknowledgment</div>
@@ -1678,13 +1771,33 @@ body {
                 <div class="info-label">Action</div>
                 <div class="info-value">7-14 days</div>
             </div>
+            <div class="info-card">
+                <div class="info-label">Telegram Notice</div>
+                <div class="info-value">Direct action</div>
+            </div>
         </div>
 
-        <h3>11.4 Counter-Notice</h3>
+        <h3>11.5 Counter-Notice</h3>
         <p>
-            Agar aapka content galat tarike se remove hua hai, toh aap
-            counter-notice bhej sakte hain. Isme bhi wahi details honi chahiye.
+            If your content was removed incorrectly, you may send a
+            counter-notice. It must include the same details plus a declaration
+            that the removal was a mistake.
         </p>
+
+        <h3>11.6 Repeat Infringer Policy</h3>
+        <p>
+            After 3 valid DMCA complaints, a user's account will be
+            permanently banned.
+        </p>
+
+        <div class="alert alert-warning">
+            <div class="alert-icon">⚠️</div>
+            <div class="alert-content">
+                <strong>Important:</strong>
+                No content will be automatically removed without a copyright
+                holder. Send a proper legal notice first, then we will act.
+            </div>
+        </div>
     </section>
 
     <!-- 12 -->
@@ -1699,41 +1812,42 @@ body {
         </div>
 
         <p>
-            Agar aapko Isukobit par koi abuse ya violation dikhti hai, toh
-            humein zaroor report karein.
+            If you find any abuse or violation on Isukobit, please report it
+            to us.
         </p>
 
-        <h3>12.1 Report Karne Ka Tarika</h3>
+        <h3>12.1 How to Report</h3>
         <ul>
             <li><strong>Telegram:</strong> @IsukobitSupport</li>
             <li><strong>In-bot:</strong> <code>/report</code> command</li>
         </ul>
 
-        <h3>12.2 Kya Report Karein</h3>
+        <h3>12.2 What to Report</h3>
         <ul>
-            <li>Illegal content</li>
-            <li>Copyright infringement</li>
+            <li>CSAM (highest priority)</li>
+            <li>Non-consensual intimate images</li>
+            <li>Terrorism content</li>
+            <li>Copyright infringement (with DMCA)</li>
             <li>Spam users</li>
             <li>Harassment</li>
             <li>Malware files</li>
-            <li>Fake information</li>
-            <li>Impersonation</li>
+            <li>Doxxing</li>
         </ul>
 
         <h3>12.3 Report Format</h3>
-        <p>Apni report mein yeh include karein:</p>
+        <p>Include the following in your report:</p>
         <ol>
-            <li>Abuse ka type</li>
-            <li>Kahan hua (file code, user ID)</li>
-            <li>Kab hua (approximate date)</li>
+            <li>Type of abuse</li>
+            <li>Where it happened (file code, user ID)</li>
+            <li>When it happened (approximate date)</li>
             <li>Description</li>
             <li>Evidence (screenshots, links)</li>
-            <li>Aapka contact info</li>
+            <li>Your contact info</li>
         </ol>
 
         <h3>12.4 Response Time</h3>
         <p>
-            Hum saari reports ko seriously lete hain. Response time:
+            We take all reports seriously. Response time:
         </p>
         <ul>
             <li><strong>Critical (CSAM, terrorism):</strong> Immediate</li>
@@ -1741,6 +1855,16 @@ body {
             <li><strong>Medium (spam, copyright):</strong> 48-72 hours</li>
             <li><strong>Low (general queries):</strong> 7 days</li>
         </ul>
+
+        <h3>12.5 CSAM Zero Tolerance</h3>
+        <div class="alert alert-danger">
+            <div class="alert-icon">⛔</div>
+            <div class="alert-content">
+                <strong>Zero Tolerance:</strong>
+                We take immediate action against CSAM — permanent account ban
+                + Telegram report + law enforcement report.
+            </div>
+        </div>
     </section>
 
     <!-- 13 -->
@@ -1755,41 +1879,41 @@ body {
         </div>
 
         <p>
-            Hum kisi bhi user ka account kabhi bhi terminate kar sakte hain.
+            We may terminate any user's account at any time.
         </p>
 
         <h3>13.1 Termination Reasons</h3>
         <ul>
-            <li>Terms of Service ka violation</li>
-            <li>Illegal content upload</li>
-            <li>Copyright infringement (repeated)</li>
+            <li>Violation of Terms of Service</li>
+            <li>Uploading CSAM or illegal content</li>
+            <li>Repeated DMCA complaints (3+)</li>
             <li>Spam behavior</li>
-            <li>Bot abuse</li>
+            <li>Bot abuse / attacks</li>
             <li>Fake information</li>
-            <li>Multiple reports</li>
+            <li>Multiple valid reports</li>
         </ul>
 
         <h3>13.2 Termination Process</h3>
         <ol>
-            <li>Report receive hoti hai</li>
-            <li>Review kiya jaata hai</li>
-            <li>User ko warning ya notice</li>
-            <li>Agar repeated, toh ban</li>
-            <li>Severe case mein direct ban</li>
+            <li>A report is received</li>
+            <li>Review is conducted</li>
+            <li>User receives warning or notice</li>
+            <li>If repeated, ban</li>
+            <li>In severe cases, direct ban (CSAM)</li>
         </ol>
 
         <h3>13.3 Effects of Termination</h3>
         <ul>
-            <li>Bot use karne ka access block</li>
-            <li>Saari files inaccessible</li>
-            <li>Account data delete (after retention period)</li>
-            <li>No refund (agar premium tha)</li>
+            <li>Access to bot blocked</li>
+            <li>All files become inaccessible</li>
+            <li>Account data deleted (after retention period)</li>
+            <li>No refund (if premium was active)</li>
         </ul>
 
         <h3>13.4 Appeal Process</h3>
         <p>
-            Agar aapko lagta hai ki galat tarike se ban kiya gaya, toh aap
-            appeal kar sakte hain @IsukobitSupport par 30 din ke andar.
+            If you believe you were banned incorrectly, you may appeal to
+            @IsukobitSupport within 30 days.
         </p>
     </section>
 
@@ -1805,31 +1929,32 @@ body {
         </div>
 
         <p>
-            Isukobit <strong>"as is"</strong> aur <strong>"as available"</strong>
-            basis par provide kiya jaata hai.
+            Isukobit is provided on an <strong>"as is"</strong> and
+            <strong>"as available"</strong> basis.
         </p>
 
         <h3>14.1 No Warranty</h3>
         <p>
-            Hum koi bhi warranty nahi dete:
+            We make no warranty that:
         </p>
         <ul>
-            <li>Service 100% available rahegi</li>
-            <li>Files kabhi delete nahi hongi</li>
-            <li>No bugs honge</li>
-            <li>Speed consistent rahegi</li>
-            <li>Errors nahi aayenge</li>
+            <li>The service will be 100% available</li>
+            <li>Files will never be deleted</li>
+            <li>There will be no bugs</li>
+            <li>Speed will be consistent</li>
+            <li>There will be no errors</li>
+            <li>Content will be accurate</li>
         </ul>
 
         <h3>14.2 Service Availability</h3>
         <p>
-            Service kabhi bhi band ho sakti hai:
+            The service may be shut down at any time due to:
         </p>
         <ul>
             <li>Server maintenance</li>
             <li>Technical issues</li>
             <li>Telegram API changes</li>
-            <li>Legal requirements</li>
+            <li>Legal requirements (DMCA, court orders)</li>
             <li>Force majeure events</li>
         </ul>
 
@@ -1838,15 +1963,16 @@ body {
             <div class="alert-icon">⚠️</div>
             <div class="alert-content">
                 <strong>Warning:</strong>
-                Hum file loss ke liye responsible nahi hain. **Apni important
-                files ka backup khud rakhein.**
+                We are not responsible for file loss.
+                <strong>Keep your own backups of important files.</strong>
             </div>
         </div>
 
         <h3>14.4 Third-Party Content</h3>
         <p>
-            Isukobit par jo content hai woh users ne upload kiya hai. Hum
-            uska content verify nahi karte aur uska responsible nahi hain.
+            All content on Isukobit has been uploaded by users. We do not
+            verify any content and are not responsible for it. The legal
+            responsibility for each piece of content rests with its uploader.
         </p>
     </section>
 
@@ -1862,11 +1988,11 @@ body {
         </div>
 
         <p>
-            Maximum extent permitted by law, Isukobit team in cheezon ke liye
-            liable nahi hain:
+            To the maximum extent permitted by law, the Isukobit team is not
+            liable for:
         </p>
 
-        <h3>15.1 Kya Cover Nahi Hota</h3>
+        <h3>15.1 What Is Not Covered</h3>
         <ul>
             <li>Direct, indirect, incidental damages</li>
             <li>Data loss</li>
@@ -1874,19 +2000,26 @@ body {
             <li>Business interruption</li>
             <li>Third-party claims</li>
             <li>Emotional distress</li>
+            <li>Damages caused by user-generated content</li>
         </ul>
 
         <h3>15.2 Maximum Liability</h3>
         <p>
-            Agar hum liable hote hain, toh maximum liability aapke dwara
-            paid amount (agar kuch paid) tak limited hai.
+            If we are held liable, the maximum liability is limited to the
+            amount you have paid (if any).
         </p>
 
         <h3>15.3 Indemnification</h3>
         <p>
-            Aap Isukobit team ko indemnify karte hain kisi bhi claims se jo
-            aapke use ke kaaran aaye.
+            You indemnify the Isukobit team against any claims arising from
+            your use, including but not limited to:
         </p>
+        <ul>
+            <li>Copyright infringement claims</li>
+            <li>Defamation claims</li>
+            <li>Privacy violations</li>
+            <li>Illegal content claims</li>
+        </ul>
     </section>
 
     <!-- 16 -->
@@ -1901,27 +2034,31 @@ body {
         </div>
 
         <p>
-            Hum yeh terms kabhi bhi update kar sakte hain.
+            We may update these terms at any time.
         </p>
 
         <h3>16.1 Notification</h3>
         <p>
-            Material changes ke liye hum:
+            For material changes, we will:
         </p>
         <ul>
-            <li>Bot ke through notification bhejenge</li>
-            <li>Update channel par post karenge</li>
-            <li>Yeh page update karenge</li>
+            <li>Send a notification via the bot</li>
+            <li>Post on our update channel</li>
+            <li>Update this page</li>
         </ul>
 
         <h3>16.2 Effective Date</h3>
         <p>
-            Changes 7 din ke notice ke baad effective honge. Aapka continued
-            use acceptance maana jayega.
+            Changes will be effective after a 7-day notice period. Your
+            continued use will be considered acceptance.
         </p>
 
         <h3>16.3 Version History</h3>
         <div class="info-grid">
+            <div class="info-card">
+                <div class="info-label">Version 3.0</div>
+                <div class="info-value">15 Feb 2026 (Adult + DMCA)</div>
+            </div>
             <div class="info-card">
                 <div class="info-label">Version 2.0</div>
                 <div class="info-value">15 Feb 2026</div>
@@ -1945,25 +2082,34 @@ body {
         </div>
 
         <p>
-            Yeh terms India ke laws ke under govern hote hain.
+            These terms are governed by the <strong>laws of India</strong>,
+            and relevant international laws (DMCA, GDPR) also apply.
         </p>
 
         <h3>17.1 Jurisdiction</h3>
         <p>
-            Koi bhi legal dispute India ki courts ke jurisdiction mein hoga.
+            Any legal dispute will be subject to the jurisdiction of Indian courts.
         </p>
 
         <h3>17.2 Dispute Resolution</h3>
         <ol>
-            <li>Pehle informal discussion try karein</li>
-            <li>Mediation consider karein</li>
-            <li>Agar resolve nahi hota, toh arbitration</li>
+            <li>First try informal discussion</li>
+            <li>Consider mediation</li>
+            <li>If unresolved, then arbitration</li>
             <li>Last resort: courts</li>
         </ol>
 
         <h3>17.3 Severability</h3>
         <p>
-            Agar koi clause invalid hua, toh baaki clauses valid rahenge.
+            If any clause is found invalid, the remaining clauses will remain valid.
+        </p>
+
+        <h3>17.4 Intermediary Status</h3>
+        <p>
+            Isukobit is an intermediary under the
+            <strong>Indian IT Act, 2000 (Section 79)</strong>. Therefore, we
+            are not liable for user-generated content, just as Telegram and
+            Google are not.
         </p>
     </section>
 
@@ -1979,7 +2125,7 @@ body {
         </div>
 
         <p>
-            Koi bhi sawaal, feedback, ya complaint ke liye humein contact karein:
+            For any questions, feedback, or complaints, contact us:
         </p>
 
         <div class="contact-grid">
@@ -2010,7 +2156,7 @@ body {
             <a href="mailto:legal@isukobit.com" class="contact-card">
                 <div class="contact-icon">✉️</div>
                 <div class="contact-info">
-                    <div class="contact-label">Legal</div>
+                    <div class="contact-label">Legal / DMCA</div>
                     <div class="contact-value">legal@isukobit.com</div>
                 </div>
             </a>
@@ -2018,8 +2164,9 @@ body {
 
         <h3>Response Times</h3>
         <ul>
-            <li><strong>Critical issues:</strong> 2-4 hours</li>
-            <li><strong>General queries:</strong> 24 hours</li>
+            <li><strong>Critical (CSAM):</strong> Immediate</li>
+            <li><strong>DMCA notices:</strong> 24-48 hours</li>
+            <li><strong>General queries:</strong> 24-72 hours</li>
             <li><strong>Legal matters:</strong> 48-72 hours</li>
         </ul>
 
@@ -2027,21 +2174,19 @@ body {
             <div class="alert-icon">🙏</div>
             <div class="alert-content">
                 <strong>Thank you for using Isukobit!</strong>
-                Aapka trust hamare liye important hai. Hum best service provide
-                karne ki koshish karte hain.
+                Your trust is important to us. We strive to provide the best
+                possible service.
             </div>
         </div>
     </section>
 
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════
-     🦶 FOOTER
-     ═══════════════════════════════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer class="footer">
     <div class="footer-logo">🚀 Isukobit</div>
     <div class="footer-tagline">
-        Telegram File Store Bot — Fast, Secure, Reliable
+        Telegram File Store Bot — Fast, Secure, 18+ Content Allowed
     </div>
 
     <div class="footer-links">
@@ -2054,27 +2199,21 @@ body {
 
     <div class="footer-copy">
         © 2026 <strong>Isukobit</strong> — All Rights Reserved<br>
-        Made with ❤️ in India
+        Made with ❤️ in India | 18+ Content Platform
     </div>
 </footer>
 
-<!-- ═══════════════════════════════════════════════════════════════════
-     🔙 BACK TO TOP BUTTON
-     ═══════════════════════════════════════════════════════════════════ -->
+<!-- BACK TO TOP BUTTON -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
     ↑
 </button>
 
-<!-- ═══════════════════════════════════════════════════════════════════
-     ⚙️ JAVASCRIPT
-     ═══════════════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT -->
 <script>
 (function() {
     'use strict';
 
-    // ═══════════════════════════════════════════════════════════════
-    // 🔙 BACK TO TOP BUTTON
-    // ═══════════════════════════════════════════════════════════════
+    // BACK TO TOP BUTTON
     const backToTop = document.getElementById('backToTop');
 
     function toggleBackToTop() {
@@ -2095,9 +2234,7 @@ body {
     window.addEventListener('scroll', toggleBackToTop, { passive: true });
     toggleBackToTop();
 
-    // ═══════════════════════════════════════════════════════════════
-    // 📍 SMOOTH SCROLL FOR ANCHOR LINKS
-    // ═══════════════════════════════════════════════════════════════
+    // SMOOTH SCROLL FOR ANCHOR LINKS
     document.querySelectorAll('a[href^="#"]').forEach(function(link) {
         link.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
@@ -2116,9 +2253,7 @@ body {
         });
     });
 
-    // ═══════════════════════════════════════════════════════════════
-    // ✨ FADE-IN ANIMATION ON SCROLL
-    // ═══════════════════════════════════════════════════════════════
+    // FADE-IN ANIMATION ON SCROLL
     if ('IntersectionObserver' in window) {
         const sections = document.querySelectorAll('.section');
         const observer = new IntersectionObserver(function(entries) {
@@ -2140,16 +2275,13 @@ body {
             observer.observe(section);
         });
 
-        // First section visible immediately
         if (sections.length > 0) {
             sections[0].style.opacity = '1';
             sections[0].style.transform = 'translateY(0)';
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // 📊 COPY TO CLIPBOARD (Contact Info)
-    // ═══════════════════════════════════════════════════════════════
+    // COPY TO CLIPBOARD
     document.querySelectorAll('.contact-value').forEach(function(el) {
         el.style.cursor = 'pointer';
         el.title = 'Click to copy';
@@ -2167,22 +2299,18 @@ body {
         });
     });
 
-    // ═══════════════════════════════════════════════════════════════
-    // 📅 AUTO-UPDATE YEAR IN FOOTER
-    // ═══════════════════════════════════════════════════════════════
+    // AUTO-UPDATE YEAR
     const yearElements = document.querySelectorAll('.footer-copy');
     const currentYear = new Date().getFullYear();
     yearElements.forEach(function(el) {
         el.innerHTML = el.innerHTML.replace(/© \d{4}/, '© ' + currentYear);
     });
 
-    // ═══════════════════════════════════════════════════════════════
-    // ⚡ LOADING PERFORMANCE
-    // ═══════════════════════════════════════════════════════════════
+    // PERFORMANCE LOG
     window.addEventListener('load', function() {
-        console.log('🚀 Isukobit Terms & Privacy Page Loaded');
+        console.log('🚀 Isukobit Terms Page Loaded (18+)');
         console.log('📅 Last Updated: 15 Feb 2026');
-        console.log('📄 Version: 2.0');
+        console.log('📄 Version: 3.0');
     });
 
 })();
